@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+	<head>
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110008774-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-110008774-1');
+		</script>
+
+		<meta charset="utf-8" />
+		<link rel="home" href="{{ siteUrl }}" />
+		<title>Brugge Triennale</title>
+		<meta name="description" content=" LIQUID CITY -VLOEIBARE STAD BRUGGES 2018">
+		<meta property="og:image" content="">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.0/sweetalert2.min.css" />
+		<link rel="stylesheet" href="/assets/css/base.css" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<meta name="format-detection" content="telephone=no" />
+
+		<!-- FAVICONS -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/meta/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/meta/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/meta/favicon-16x16.png">
+		<link rel="manifest" href="/assets/img/meta/manifest.json">
+		<link rel="mask-icon" href="/assets/img/meta/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="/assets/img/meta/favicon.ico">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- 3RD PARTY SCRIPTS ///////////////////////////////////////////
+		In some cases it's better to host 3rd party libraries (like jQuery)
+		on a CDN, providing we have a local fallback in place
+		-->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+
+	</head>
+
+
+	<body>
+		{% minify html %}
+			{% include '/generic/_header.html' %}
+
+			<main id="content" role="main">
+				{% block content %}
+				{% endblock %}
+			</main>
+
+			{% include '/generic/_footer.html' %}
+		{% endminify %}
+	</body>
+	<script src="/assets/js/app.js"></script>
+	{% block footer %}
+	{% endblock %}
+
+</html>

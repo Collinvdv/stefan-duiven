@@ -1,0 +1,30 @@
+// -------------------------------------------------------------------
+// :: intro
+// -------------------------------------------------------------------
+.o-header {
+	display: flex;
+	justify-content: space-between;
+
+	&__navigation {
+		display: inline-block;
+
+		&__item {
+			display: inline-block;
+			font-weight: bold;
+			padding: 20px 30px;
+			text-decoration: none;
+			text-transform: none;
+
+			span {
+				border-bottom: 1px solid $primary-color;
+				padding-bottom: 2px;
+			}
+
+			&.is-active {
+				background-color: $primary-color;
+				color: $white;
+				text-decoration: none;
+			}
+		}
+	}
+}

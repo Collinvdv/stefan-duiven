@@ -1,0 +1,24 @@
+// -------------------------------------------------------------------
+// :: ARTICLE GRID
+// -------------------------------------------------------------------
+.o-article-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+// -------------------------------------------------------------------
+// :: ARTICLE GRID MODIFIERS
+// -------------------------------------------------------------------
+.o-article-grid--full {
+	margin-bottom: 75px;
+	width: 100%;
+}
+
+.o-article-grid--2-4 {
+	width: 100%;
+
+	@include FLOW-at($tablet) {
+		width: calc((100% - 80px) / 2);
+	}
+}

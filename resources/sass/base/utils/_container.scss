@@ -1,0 +1,33 @@
+// -------------------------------------------------------------------
+// :: CONTAINER
+// -------------------------------------------------------------------
+.u-container {
+	// @include clearfloat();
+	width: 90%;
+	max-width: $max-width;
+	position: relative;
+	margin: auto;
+	letter-spacing: -0.28em;
+	padding-left: 0;
+
+	> *{
+		letter-spacing: normal;
+	}
+}
+
+.u-container--small {
+	width: 50%;
+}
+
+.u-container--center {
+	text-align: center;
+}
+
+.u-container--flex {
+	display: flex;
+	// flex-wrap: wrap;
+}
+
+.u-container--flexRowReverse {
+	flex-direction: row-reverse;
+}

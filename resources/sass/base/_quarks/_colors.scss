@@ -1,0 +1,33 @@
+// -------------------------------------------------------------------
+// :: COLORS
+// -------------------------------------------------------------------
+
+
+$black: #20262F;
+$white: #FFFFFF;
+$aqua:       #00AECE;
+$aqua-dark:  #0A859B;
+$dark-extra:    $black;
+$dark:       	#2F3742;
+$medium:       	#3F4A59;
+$light: 		#F7F9FB;
+$light-extra:   $white;
+$red: #C53A42;
+
+$primary-color: $red;
+$secondary-color: $dark;
+
+$font-color:          #7F7F7F; // Base
+$font-color-medium:   rgba($font-color, 0.72); // Secondary (eg. image caption)
+$font-color-light:    #AAC0D2; // Placeholders in forms
+$font-color-disabled: rgba($font-color, 0.3); // Disabled Text
+
+$background: #F7F9FB;
+
+$border-color: #D9E5F6; // Borders and rules
+$border-color-active: #93ADD1; // Active border
+
+$ui-red:    #FFB4C2;
+$ui-orange: #FCE7AC;
+$ui-green:  #E6F1CE;
+$ui-blue:   #CAEDF3;

@@ -1,0 +1,38 @@
+// -------------------------------------------------------------------
+// :: language
+// -------------------------------------------------------------------
+.o-language {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	padding-left: 0;
+
+	.m-dropdown {
+		top: 0;
+	}
+}
+
+.o-language__item {
+	margin-bottom: 10px;
+	margin-right: 10px;
+
+	a {
+		color: $font-color;
+		font-family: $font-family-secondary;
+		font-weight: bold;
+		font-size: $font-size-xlarge;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&--active {
+		a {
+			color: $primary-color;
+		}
+
+	}
+
+}

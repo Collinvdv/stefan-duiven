@@ -1,0 +1,12 @@
+<section class="o-language">
+	<div class="m-dropdown js-dropdown">
+		<div class="m-dropdown__content">
+
+			{% for locale in craft.app.i18n.siteLocales %}
+				<a href="{{locale == 'nl' ? '' : '/' ~ locale}}/{{craft.app.request.pathInfo}}" class="{{ craft.app.language == locale ? 'is-active'}}">
+					{{locale}}<span class="m-dropdown__arrow"></span>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>

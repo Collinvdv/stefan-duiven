@@ -1,0 +1,74 @@
+// -------------------------------------------------------------------
+// :: Hero image
+// -------------------------------------------------------------------
+.o-hero {
+	background-color: $primary-color;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 500px;
+	padding: 25px 0;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	display: flex;
+}
+
+.o-hero__title {
+	color: $white;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+.o-hero__subtitle {
+	align-items: center;
+	color: $white;
+	font-weight: bold;
+	justify-content: center;
+	text-transform: uppercase;
+	padding-top: 10px;
+
+	h2 {
+		width: 100%;
+		text-align: center;
+	}
+
+	@include FLOW-at($tablet) {
+		display: flex;
+
+		h2 {
+			width: auto;
+
+			&:first-of-type {
+				margin-left: 35px;
+			}
+		}
+	}
+}
+
+.o-hero__square__container {
+	display: flex;
+	justify-content: center;
+	margin: 10px;
+
+	.o-hero__square {
+		margin: 5px;
+	}
+
+	@include FLOW-at($tablet){
+		display: block;
+		margin: 0 10px;
+
+		.o-hero__square {
+			margin: 0;
+		}
+	}
+}
+
+.o-hero__square {
+	background-color: $white;
+	display: inline-block;
+	transform: rotate(45deg);
+	height: 10px;
+	width: 10px;
+}

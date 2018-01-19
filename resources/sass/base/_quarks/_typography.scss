@@ -1,0 +1,274 @@
+// -------------------------------------------------------------------
+// :: TYPOGRAPHY
+// -------------------------------------------------------------------
+// - https://github.com/railsware/applepie
+// - http://www.google.com/design/spec/style/typography.html
+// - http://typecast.com/blog/a-more-modern-scale-for-web-typography
+// - http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights
+// - http://modularscale.com
+
+
+//@include get-font("Fresco Sans", "../fonts/FrescoSans-LightItalic", 100, italic);
+//@include get-font("Fresco", "../fonts/Fresco-LightItalic");
+@include get-font("Simplon Norm", "/assets/fonts/simplonnorm-light", 300);
+@include get-font("Simplon Norm", "/assets/fonts/simplonnorm-regular", 400);
+@include get-font("Simplon Norm", "/assets/fonts/simplonnorm-bold", 700);
+
+@include get-font("Simplon Mono", "/assets/fonts/simplonmono-light", 300);
+@include get-font("Simplon Mono", "/assets/fonts/simplonmono-regular", 400);
+@include get-font("Simplon Mono", "/assets/fonts/simplonmono-bold", 700);
+
+$font-family-primary: "Simplon Norm";
+$font-family-secondary: "Simplon Mono";
+
+// -------------------------------------------------------------------
+// :: BASE
+// -------------------------------------------------------------------
+
+html {
+	font-size: rem(16px);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	color: $font-color;
+	font-family: $font-family-sans;
+	font-size: rem($font-size-medium);
+	line-height: $line-height;
+}
+
+
+// -------------------------------------------------------------------
+// :: NORMALIZE
+// -------------------------------------------------------------------
+// If a margin/padding is set somewhere, remove it from below
+// Keep it DRY and prevent overwrites
+
+h1,
+h2,
+h4,
+blockquote {
+	font-weight: 100;
+}
+
+h3,
+h5,
+h6,
+strong {
+	font-weight: 700;
+}
+
+small {
+	display: inline-block;
+}
+
+
+// -------------------------------------------------------------------
+// :: MARGINS
+// -------------------------------------------------------------------
+// If a margin/padding is set somewhere, remove it from below
+// Keep it DRY and prevent overwrites
+
+h1,
+h2,
+h3,
+h4,
+p,
+h5,
+h6,
+ul,
+ol,
+body {
+	margin: 0;
+}
+
+
+// -------------------------------------------------------------------
+// :: BLOCK ELEMENTS
+// -------------------------------------------------------------------
+
+h1 {
+	color: $primary-color;
+	font-family: $font-family-secondary;
+	font-size: rem($font-size-xxlarge);
+	font-weight: bold;
+	line-height: 1.25;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+
+	@include FLOW-at($tablet){
+		font-size: rem($font-size-xxxlarge);
+	}
+}
+
+.withLine {
+	margin-bottom: 40px;
+
+	@include FLOW-at($tablet){
+		&:before {
+			content: '';
+
+			background-color: $primary-color;
+			display: inline-block;
+			height: 2px;
+			width: 100%;
+			position: absolute;
+			top: 18px;
+			left: -101%;
+		}
+	}
+}
+
+h2 {
+	font-size: rem($font-size-xlarge);
+	font-family: $font-family-secondary;
+	font-weight: bold;
+	line-height: 1.025;
+	letter-spacing: 1px;
+}
+
+h3 {
+	font-family: $font-family-secondary;
+	font-size: rem($font-size);
+	line-height: 1.45;
+
+	@include FLOW-at($tablet){
+		font-size: rem($font-size-medium);
+	}
+}
+
+h4 {
+	font-size: rem($font-size);
+	line-height: 1.45;
+
+	@include FLOW-at($tablet){
+		font-size: rem($font-size-large);
+	}
+}
+
+h5 {
+	font-size: rem($font-size);
+	line-height: 1.55;
+}
+
+h6 {
+	line-height: 1.55;
+	font-size: rem($font-size-small);
+	font-weight: 200;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: $font-family-primary;
+	font-size: $font-size-medium;
+	margin: 1.2em 0;
+
+	&:first-child{
+		margin: 0;
+	}
+
+	[class*="icon"]{
+		line-height: 1;
+
+		&:before{
+			font-size: 2.5em;
+		}
+	}
+}
+
+li {
+	font-family: $font-family-primary;
+	font-size: $font-size-medium;
+}
+
+a {
+	font-family: $font-family-secondary;
+	text-transform: uppercase;
+}
+
+h6,
+small,
+cite {
+	font-size: rem($font-size-small);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	&.primary-color{
+		color: $primary-color;
+	}
+
+	&.secondary-color{
+		color: $secondary-color;
+	}
+}
+
+// -------------------------------------------------------------------
+// :: DECORATORS
+// -------------------------------------------------------------------
+
+a,
+.is-hyperlink {
+	color: $primary-color;
+	background: transparent;
+}
+
+a:hover,
+a:active {
+	text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+	outline: none;
+}
+
+// Highlight text-selection
+// And adjust font-color for
+// deleted/updated content
+
+mark {
+	background: $ui-orange;
+}
+
+del {
+	color: $font-color-medium;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid $border-color;
+	box-sizing: content-box;
+	margin: 1.75em 0;
+}
+
+// Blockquote and
+// author name (cite)
+
+blockquote {
+	font-family: $font-family-serif;
+	font-weight: 100;
+	font-size: rem(26px);
+	line-height: 1.25;
+	margin: 0;
+}
+
+cite {
+	color: $font-color-medium;
+	font-family: $font-family-sans;
+	font-style: normal;
+	margin-top: 0.75em;
+	display: block;
+}
+
+cite:before {
+	content: '\2014';
+	margin: 0 0.3em;
+}

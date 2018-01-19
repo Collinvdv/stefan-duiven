@@ -1,0 +1,17 @@
+.a-tags {
+	display: flex;
+	flex-wrap: wrap;
+
+	list-style-type: none;
+	margin: 10px 0;
+	padding-left: 0;
+
+	.a__tag {
+		color: $primary-color;
+		border: 1px dotted $primary-color;
+		padding: 0px 10px;
+		margin-right: 10px;
+		font-family: $font-family-secondary;
+		font-size: $font-size-medium;
+	}
+}

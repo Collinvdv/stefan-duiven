@@ -1,0 +1,45 @@
+// -------------------------------------------------------------------
+// :: SECTION
+// -------------------------------------------------------------------
+.m-section{
+	padding: calc(#{$default-padding} / 2) 0;
+	position: relative;
+
+	@include FLOW-at($tablet){
+		padding: $default-padding 0;
+	}
+
+	@include FLOW-at($desktop){
+		padding: calc(#{$default-padding} * 2) 0;
+	}
+}
+
+.m-section--small{
+	padding: calc(#{$default-padding} / 2) 0;
+
+	@include FLOW-at($tablet){
+		padding: $default-padding 0;
+	}
+
+	@include FLOW-at($desktop){
+		padding: calc(#{$default-padding}) 0;
+	}
+}
+
+.m-section--inverse {
+	background-color: $primary-color;
+	clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+	color: $white;
+	padding-top: 200px;
+	position: relative;
+	overflow: hidden;
+	
+	h1 {
+		color: $white;
+		margin-bottom: 75px;
+
+		&:before {
+			background-color: $white;
+		}
+	}
+}

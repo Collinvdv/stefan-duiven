@@ -1,0 +1,24 @@
+// -------------------------------------------------------------------
+// :: GLOBAL LAYOUT
+// -------------------------------------------------------------------
+html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+.container {
+	width: 90%;
+	max-width: 1140px;
+	position: relative;
+	margin: auto;
+	letter-spacing: -0.28em;
+	padding-left: 0;
+
+	> *{
+		letter-spacing: normal;
+	}
+}
+
+section .container {
+	padding: 2rem 0;
+}

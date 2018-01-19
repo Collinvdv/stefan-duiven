@@ -1,0 +1,23 @@
+// -------------------------------------------------------------------
+// :: Additional
+// -------------------------------------------------------------------
+.m-additional {
+	width: calc(33% - 15px);
+
+	&__image {
+		align-items: center;
+		background-size: cover;
+		display: flex;
+		height: 370px;
+		justify-content: center;
+		margin-bottom: 25px;
+		width: 100%;
+	}
+
+	&__title {
+		color: $white;
+		font-size: $font-size-xxxlarge;
+		text-transform: uppercase;
+		text-decoration: underline;
+	}
+}

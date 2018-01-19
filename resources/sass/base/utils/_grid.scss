@@ -1,0 +1,94 @@
+// -------------------------------------------------------------------
+// :: GRID SYSTEM
+// -------------------------------------------------------------------
+// The grid system should be wrapped inside a div
+// with classes: .container and .inline-list
+
+$grid-gutter: 1rem !default;
+$grid-gutter-row: $grid-gutter !default;
+
+$_grid-col-2: 100% / 2;
+$_grid-col-3: 100% / 3;
+$_grid-col-4: 100% / 4;
+$_grid-col-5: 100% / 5;
+
+.u-grid{
+	@include clearfloat();
+}
+
+[class*="u-grid__col"]{
+	float: left;
+	width: 100%;
+	vertical-align: top;
+}
+
+.u-grid__col-1-2 { @include FLOW-at($tablet){width: $_grid-col-2;} }
+.u-grid__col-1-3 { @include FLOW-at($tablet){width: $_grid-col-2;} @include FLOW-at($desktop){width: $_grid-col-3;} }
+.u-grid__col-2-3 { @include FLOW-at($tablet){width: 2 * $_grid-col-3;} }
+.u-grid__col-1-4 { @include FLOW-at($tablet){width: $_grid-col-2;} @include FLOW-at($desktop){width: $_grid-col-4;}}
+.u-grid__col-3-4 { @include FLOW-at($tablet){width: $_grid-col-2;} @include FLOW-at($desktop){width: 3 * $_grid-col-4;}}
+.u-grid__col-1-5 { width: $_grid-col-2; @include FLOW-at($tablet){width: $_grid-col-5;} }
+
+// Extended grid system
+// for use in page layouts
+
+.u-grid--with-margins {
+	width: calc(100% + #{$grid-gutter});
+	margin-left: -$grid-gutter / 2;
+
+	[class*="u-grid__col"] {
+		margin: #{$grid-gutter-row / 2} #{$grid-gutter / 2};
+		width: calc(100% - #{$grid-gutter});
+	}
+
+	.u-grid__col-1-2 {
+		@include FLOW-at($tablet){
+			width: calc(#{$_grid-col-2} - #{$grid-gutter});
+		}
+	}
+
+	.u-grid__col-1-3 {
+		@include FLOW-at($tablet){
+			width: calc(#{$_grid-col-2} - #{$grid-gutter});
+		}
+
+		@include FLOW-at($desktop){
+			width: calc(#{$_grid-col-3} - #{$grid-gutter});
+		}
+	}
+
+	.u-grid__col-2-3 {
+		@include FLOW-at($tablet){
+			width: calc(#{2 * $_grid-col-3} - #{$grid-gutter});
+		}
+	}
+
+	.u-grid__col-1-4 {
+		@include FLOW-at($tablet){
+			width: calc(#{$_grid-col-2} - #{$grid-gutter});
+		}
+
+		@include FLOW-at($desktop){
+			width: calc(#{$_grid-col-4} - #{$grid-gutter});
+		}
+	}
+
+	.u-grid__col-3-4 {
+		@include FLOW-at($tablet){
+			width: calc(#{$_grid-col-2} - #{$grid-gutter});
+		}
+
+		@include FLOW-at($desktop){
+			width: calc(#{3 * $_grid-col-4} - #{$grid-gutter});
+		}
+	}
+
+	.u-grid__col-1-5 {
+		width: calc(#{$_grid-col-2} - #{$grid-gutter});
+
+		@include FLOW-at($tablet){
+			width: calc(#{$_grid-col-5} - #{$grid-gutter});
+		}
+	}
+
+}
