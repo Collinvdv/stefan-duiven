@@ -11,9 +11,11 @@
 	}
 
 	.o-header__logo {
+		color: $font-color-gray;
 		font-family: $font-family-secondary;
 		font-weight: bold;
 		font-size: 24px;
+		text-decoration: none;
 	}
 
 	&__navigation {

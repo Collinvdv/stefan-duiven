@@ -26,20 +26,6 @@
 	}
 }
 
-.m-section--inverse {
-	background-color: $primary-color;
-	clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-	color: $white;
-	padding-top: 200px;
-	position: relative;
-	overflow: hidden;
-	
-	h1 {
-		color: $white;
-		margin-bottom: 75px;
-
-		&:before {
-			background-color: $white;
-		}
-	}
+.m-section--colored {
+	background: linear-gradient(to bottom, $background 0%,$background 80%,$white 80%, $white 100%); 
 }

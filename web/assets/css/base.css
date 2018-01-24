@@ -1622,23 +1622,9 @@ fieldset:last-child {
   }
 }
 
-.m-section--inverse {
-  background-color: #40A5F3;
-  -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
-  color: #FFFFFF;
-  padding-top: 200px;
-  position: relative;
-  overflow: hidden;
-}
-
-.m-section--inverse h1 {
-  color: #FFFFFF;
-  margin-bottom: 75px;
-}
-
-.m-section--inverse h1:before {
-  background-color: #FFFFFF;
+.m-section--colored {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F1F8FE), color-stop(80%, #F1F8FE), color-stop(80%, #FFFFFF), to(#FFFFFF));
+  background: linear-gradient(to bottom, #F1F8FE 0%, #F1F8FE 80%, #FFFFFF 80%, #FFFFFF 100%);
 }
 
 .o-article__block {
@@ -1860,9 +1846,11 @@ fieldset:last-child {
 }
 
 .o-header .o-header__logo {
+  color: #3B3F4B;
   font-family: "Roboto Slab", sans-serif;
   font-weight: bold;
   font-size: 24px;
+  text-decoration: none;
 }
 
 .o-header__navigation__item {

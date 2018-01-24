@@ -2,25 +2,25 @@
 <header class="o-header" id="header">
 	<div class="o-header-inner container">
 		<!--  Logo -->
-		<span class="o-header__logo">
+		<a class="o-header__logo" href="/">
 			PIGEON ltd.
-		</span>
-		
+		</a>
+
 		<!--  Navigation -->
 		<nav class="o-header__navigation" role="navigation" >
-			<a class="o-header__navigation__item is-active  {{ craft.app.request.pathInfo == 'flight' ? 'is-active'}}" href="{{siteUrl()}}/flight">
+			<a class="o-header__navigation__item {{ craft.app.request.pathInfo == 'flights' ? 'is-active'}}" href="/flights">
 				<span>
 					Flight result
 				</span>
 			</a>
 
-			<a class="o-header__navigation__item {{ craft.app.request.pathInfo == 'pigeons' ? 'is-active'}}" href="{{siteUrl()}}/pigeons">
+			<a class="o-header__navigation__item {{ craft.app.request.pathInfo == 'pigeons' ? 'is-active'}}" href="/pigeons">
 				<span>
 					Discover our pigeons
 				</span>
 			</a>
 
-			<a class="o-header__navigation__item {{ craft.app.request.pathInfo == 'blog' ? 'is-active'}}" href="{{siteUrl()}}/blog">
+			<a class="o-header__navigation__item {{ craft.app.request.pathInfo == 'blog' ? 'is-active'}}" href="/blog">
 				<span>
 					Blog
 				</span>
