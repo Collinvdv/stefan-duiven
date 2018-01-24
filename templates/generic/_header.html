@@ -1,12 +1,31 @@
 <!-- Header component -->
-<div class="container">
-	<header class="o-header" id="header">
+<header class="o-header" id="header">
+	<div class="o-header-inner container">
+		<!--  Logo -->
+		<span class="o-header__logo">
+			PIGEON ltd.
+		</span>
+		
 		<!--  Navigation -->
 		<nav class="o-header__navigation" role="navigation" >
-		
+			<a class="o-header__navigation__item is-active  {{ craft.app.request.pathInfo == 'flight' ? 'is-active'}}" href="{{siteUrl()}}/flight">
+				<span>
+					Flight result
+				</span>
+			</a>
+
+			<a class="o-header__navigation__item {{ craft.app.request.pathInfo == 'pigeons' ? 'is-active'}}" href="{{siteUrl()}}/pigeons">
+				<span>
+					Discover our pigeons
+				</span>
+			</a>
+
+			<a class="o-header__navigation__item {{ craft.app.request.pathInfo == 'blog' ? 'is-active'}}" href="{{siteUrl()}}/blog">
+				<span>
+					Blog
+				</span>
+			</a>
 		</nav>
 
-		<!--  Language-->
-		{% include '/generic/_language.html' %}
-	</header>
-</div>
+	</div>
+</header>

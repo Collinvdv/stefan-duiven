@@ -2,28 +2,45 @@
 // :: intro
 // -------------------------------------------------------------------
 .o-header {
-	display: flex;
-	justify-content: space-between;
+	padding: 10px 0;
+
+	.o-header-inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.o-header__logo {
+		font-family: $font-family-secondary;
+		font-weight: bold;
+		font-size: 24px;
+	}
 
 	&__navigation {
-		display: inline-block;
+
 
 		&__item {
-			display: inline-block;
-			font-weight: bold;
-			padding: 20px 30px;
+			color: $font-color-gray;
+			align-items: center;
+			display: inline-flex;
+			flex-direction: column;
+			margin: 5px 30px;
 			text-decoration: none;
 			text-transform: none;
 
-			span {
-				border-bottom: 1px solid $primary-color;
-				padding-bottom: 2px;
+			&:last-child {
+				margin-right: 0;
 			}
 
 			&.is-active {
-				background-color: $primary-color;
-				color: $white;
-				text-decoration: none;
+				&:after {
+					content: '';
+					background-color: $black;
+					display: inline-block;
+					margin-top: 4px;
+					height: 3px;
+					width: 20px;
+				}
 			}
 		}
 	}

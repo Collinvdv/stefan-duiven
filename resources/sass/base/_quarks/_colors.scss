@@ -1,29 +1,28 @@
 // -------------------------------------------------------------------
 // :: COLORS
 // -------------------------------------------------------------------
-
-
-$black: #20262F;
+$black: #0D1529;
 $white: #FFFFFF;
-$aqua:       #00AECE;
-$aqua-dark:  #0A859B;
+$aqua:       #40A5F3;
+$aqua-light:   #61E1ED;
 $dark-extra:    $black;
 $dark:       	#2F3742;
 $medium:       	#3F4A59;
 $light: 		#F7F9FB;
 $light-extra:   $white;
 $red: #C53A42;
+$grey: #DEE5EC;
 
-$primary-color: $red;
+$primary-color: $aqua;
 $secondary-color: $dark;
 
-$font-color:          #7F7F7F; // Base
+$font-color:          $black; // Base
 $font-color-medium:   rgba($font-color, 0.72); // Secondary (eg. image caption)
 $font-color-light:    #AAC0D2; // Placeholders in forms
+$font-color-gray: 		#3B3F4B;
 $font-color-disabled: rgba($font-color, 0.3); // Disabled Text
 
-$background: #F7F9FB;
-
+$background: #F1F8FE;
 $border-color: #D9E5F6; // Borders and rules
 $border-color-active: #93ADD1; // Active border
 

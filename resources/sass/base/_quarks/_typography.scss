@@ -10,16 +10,8 @@
 
 //@include get-font("Fresco Sans", "../fonts/FrescoSans-LightItalic", 100, italic);
 //@include get-font("Fresco", "../fonts/Fresco-LightItalic");
-@include get-font("Simplon Norm", "/assets/fonts/simplonnorm-light", 300);
-@include get-font("Simplon Norm", "/assets/fonts/simplonnorm-regular", 400);
-@include get-font("Simplon Norm", "/assets/fonts/simplonnorm-bold", 700);
-
-@include get-font("Simplon Mono", "/assets/fonts/simplonmono-light", 300);
-@include get-font("Simplon Mono", "/assets/fonts/simplonmono-regular", 400);
-@include get-font("Simplon Mono", "/assets/fonts/simplonmono-bold", 700);
-
-$font-family-primary: "Simplon Norm";
-$font-family-secondary: "Simplon Mono";
+$font-family-primary: 'Roboto ', serif;
+$font-family-secondary: "Roboto Slab", sans-serif;
 
 // -------------------------------------------------------------------
 // :: BASE
@@ -89,34 +81,14 @@ body {
 // -------------------------------------------------------------------
 
 h1 {
-	color: $primary-color;
 	font-family: $font-family-secondary;
 	font-size: rem($font-size-xxlarge);
 	font-weight: bold;
 	line-height: 1.25;
-	text-transform: uppercase;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 
 	@include FLOW-at($tablet){
 		font-size: rem($font-size-xxxlarge);
-	}
-}
-
-.withLine {
-	margin-bottom: 40px;
-
-	@include FLOW-at($tablet){
-		&:before {
-			content: '';
-
-			background-color: $primary-color;
-			display: inline-block;
-			height: 2px;
-			width: 100%;
-			position: absolute;
-			top: 18px;
-			left: -101%;
-		}
 	}
 }
 
@@ -162,7 +134,8 @@ h6 {
 p {
 	font-family: $font-family-primary;
 	font-size: $font-size-medium;
-	margin: 1.2em 0;
+	margin-bottom: 20px;
+	line-height: 26px;
 
 	&:first-child{
 		margin: 0;
