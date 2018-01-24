@@ -13,7 +13,7 @@
 // -------------------------------------------------------------------
 // Solid button with full background color
 
-@mixin FLOW-button($_color: $light-extra, $_background: $primary-color, $_border: $primary-color) {
+@mixin FLOW-button($_color: $font-color, $_background: $primary-color, $_border: $font-color) {
 
 	text-align: center;
 	text-decoration: none;
@@ -25,10 +25,10 @@
 
 	transition: all 100ms ease-in-out;
 	padding: 12px 30px 12px;
-	border: 1px solid $_border;
+	border: 2px solid $_border;
 
 	color: $_color;
-	background: $_background;
+	background: transparent;
 	font-family: $font-family-primary;
 	font-weight: bold;
 

@@ -735,21 +735,21 @@ button {
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
   padding: 12px 30px 12px;
-  border: 1px solid #40A5F3;
-  color: #FFFFFF;
-  background: #40A5F3;
+  border: 2px solid #0D1529;
+  color: #0D1529;
+  background: transparent;
   font-family: "Roboto ", serif;
   font-weight: bold;
 }
 
 .a-button:not([disabled]):hover {
   background: #289af1;
-  border-color: #289af1;
+  border-color: #070b16;
 }
 
 .a-button:not([disabled]):active {
   background: #58b0f5;
-  border-color: #289af1;
+  border-color: #070b16;
 }
 
 .a-button[disabled] {
@@ -784,7 +784,7 @@ button {
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
   padding: 12px 30px 12px;
-  border: 1px solid #D9E5F6;
+  border: 2px solid #D9E5F6;
   color: #2F3742;
   background: transparent;
   font-family: "Roboto ", serif;
@@ -1625,6 +1625,10 @@ fieldset:last-child {
 .m-section--colored {
   background: -webkit-gradient(linear, left top, left bottom, from(#F1F8FE), color-stop(80%, #F1F8FE), color-stop(80%, #FFFFFF), to(#FFFFFF));
   background: linear-gradient(to bottom, #F1F8FE 0%, #F1F8FE 80%, #FFFFFF 80%, #FFFFFF 100%);
+}
+
+.m-section--white {
+  background: #FFFFFF;
 }
 
 .o-article__block {
