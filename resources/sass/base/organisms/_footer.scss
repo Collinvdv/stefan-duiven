@@ -2,17 +2,21 @@
 // :: FOOTER
 // -------------------------------------------------------------------
 .o-footer__inner {
-	background-color: $primary-color;
 	padding: 60px 0;
 	margin-top: 40px;
 }
 
 // Footer navigation
 .o-footer__navigation {
-
-
 	&__item {
-		color: $white;
-		margin-right: 25px;
+		color: $font-color;
+		display: block;
+		font-size: rem($font-size-xxlarge);
+		font-family: $font-family-secondary;
+		font-weight: bold;
+		margin-bottom: 20px;
+		line-height: 1.025;
+		letter-spacing: 1px;
+		text-decoration: none;
 	}
 }
