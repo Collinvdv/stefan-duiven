@@ -13,7 +13,7 @@
 // -------------------------------------------------------------------
 // Solid button with full background color
 
-@mixin FLOW-button($_color: $black, $_background: $primary-color, $_border: $font-color) {
+@mixin FLOW-button($_color: $black, $_background: $primary-color, $_hover: $primary-color, $_border: $font-color) {
 
 	text-align: center;
 	text-decoration: none;
@@ -28,14 +28,14 @@
 	border: 2px solid $_border;
 
 	color: $_color !important;
-	background: transparent;
+	background: $_background;
 	font-family: $font-family-secondary;
 
 	// States
 
 	&:not([disabled]):hover {
-		border-color: $primary-color;
-		color: $primary-color !important;
+		border-color: $_hover;
+		color: $_hover !important;
 	}
 
 	&:not([disabled]):active {
@@ -57,7 +57,11 @@
 // -------------------------------------------------------------------
 
 .a-button{
-	@include FLOW-button();
+	@include FLOW-button($black, transparent, $primary-color, $font-color);
+
+	&--filled {
+		@include FLOW-button($white, $black, $primary-color, $font-color);
+	}
 }
 
 
