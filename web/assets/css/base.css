@@ -554,7 +554,7 @@ cite:before {
 
 html,
 body {
-  background-color: #F1F8FE;
+  background-color: #FFFFFF;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -574,6 +574,64 @@ body {
 
 section .container {
   padding: 2rem 0;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url(/fonts/icomoon.eot?5b2024462246ac2f3db8edba2869e6c6?#iefix) format("embedded-opentype"), url(/fonts/icomoon.woff?a682ff1edf6e5400f137c0015cccaaf8) format("woff"), url(/fonts/icomoon.ttf?c30817f41261b2b95c94bb18ccd8f43f) format("truetype"), url(/fonts/icomoon.svg?550a1d602a6549226db16f4d01ebfe6d#icon) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-send:before {
+  content: "\E900";
+}
+
+.icon-plus:before {
+  content: "\E902";
+}
+
+.icon-download:before {
+  content: "\E903";
+}
+
+.icon-chevron:before {
+  content: "\E904";
+}
+
+.icon-mail:before {
+  content: "\E905";
+}
+
+.icon-phone:before {
+  content: "\E906";
+}
+
+.icon-pin:before {
+  content: "\E907";
+}
+
+.icon-heart:before {
+  content: "\E908";
+}
+
+.icon-arrow:before {
+  content: "\E909";
 }
 
 img {
@@ -1624,6 +1682,11 @@ fieldset:last-child {
   background: linear-gradient(to bottom, #F1F8FE 0%, #F1F8FE 80%, #FFFFFF 80%, #FFFFFF 100%);
 }
 
+.m-section--coloredDark {
+  background: -webkit-gradient(linear, left top, left bottom, from(#DEE5EC), color-stop(80%, #DEE5EC), color-stop(80%, #FFFFFF), to(#FFFFFF));
+  background: linear-gradient(to bottom, #DEE5EC 0%, #DEE5EC 80%, #FFFFFF 80%, #FFFFFF 100%);
+}
+
 .m-section--white {
   background: #FFFFFF;
 }
@@ -1663,6 +1726,10 @@ fieldset:last-child {
   }
 }
 
+.o-footer {
+  background-color: #F1F8FE;
+}
+
 .o-footer__inner {
   padding: 60px 0;
   margin-top: 40px;
@@ -1681,6 +1748,7 @@ fieldset:last-child {
 }
 
 .o-header {
+  background-color: #F1F8FE;
   padding: 10px 0;
 }
 

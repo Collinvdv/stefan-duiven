@@ -11,4 +11,6 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'web/assets/js/app.js').sass('resources/sass/base.scss', 'web/assets/css/base.css');
+mix.js('resources/js/app.js', 'web/assets/js/app.js')
+		.sass('resources/sass/base.scss', 'web/assets/css/base.css')
+		.copy('resources/fonts', 'web/fonts');

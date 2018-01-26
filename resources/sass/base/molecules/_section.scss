@@ -30,6 +30,10 @@
 	background: linear-gradient(to bottom, $background 0%,$background 80%,$white 80%, $white 100%);
 }
 
+.m-section--coloredDark {
+	background: linear-gradient(to bottom, #DEE5EC 0%, #DEE5EC 80%,$white 80%, $white 100%);
+}
+
 .m-section--white {
 	background: $white;
 }
