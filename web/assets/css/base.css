@@ -1685,7 +1685,8 @@ fieldset:last-child {
 .a-link .icon-arrow,
 .a-link .icon-phone,
 .a-link .icon-mail,
-.a-link .icon-pin {
+.a-link .icon-pin,
+.a-link .icon-download {
   color: #61E1ED;
   font-size: 16px;
 }
@@ -1706,6 +1707,11 @@ fieldset:last-child {
 
 .a-link .icon-arrow {
   padding-left: 5px;
+}
+
+.a-link .icon-download {
+  font-size: 18px;
+  padding-left: 10px;
 }
 
 .a-link:hover .icon-arrow {
