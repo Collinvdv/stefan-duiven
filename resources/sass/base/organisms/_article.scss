@@ -1,5 +1,14 @@
 // article - block
 .o-article__block {
+	&__image {
+		background-size: cover;
+		background-position: center center;
+		height: 100%;
+		position: relative;
+		width: 100%;
+	}
+
+  // Modifier
 	&--featured {
 		background-color: $white;
 		box-shadow: 0 25px 50px 0 rgba(13,21,41,0.06);

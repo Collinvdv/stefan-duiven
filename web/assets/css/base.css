@@ -1644,6 +1644,28 @@ fieldset:last-child {
   text-transform: none;
 }
 
+.a-link .icon-arrow {
+  color: #61E1ED;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.m-bird__block__image {
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.m-bird__block .icon-heart {
+  bottom: -20px;
+  color: #F55533;
+  font-size: 4em;
+  position: absolute;
+  left: -20px;
+}
+
 .m-section {
   padding: calc(2.5rem / 2) 0;
   position: relative;
@@ -1689,6 +1711,14 @@ fieldset:last-child {
 
 .m-section--white {
   background: #FFFFFF;
+}
+
+.o-article__block__image {
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .o-article__block--featured {

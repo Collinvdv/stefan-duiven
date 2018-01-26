@@ -1,0 +1,19 @@
+// article - block
+.m-bird__block {
+	&__image {
+		background-size: cover;
+		background-position: center center;
+		height: 100%;
+		position: relative;
+		width: 100%;
+	}
+
+	.icon-heart {
+		bottom: -20px;
+		color: #F55533;
+		font-size: 4em;
+		position:absolute;
+		left: -20px;
+
+	}
+}
