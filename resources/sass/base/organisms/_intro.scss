@@ -15,4 +15,16 @@
 		 width: 100%;
 		 position: relative;
 	 }
-	}
+
+	 &__pigeon {
+		 @include FLOW-at($tablet){
+			 background-image: url('/assets/img/white_pigeon.png');
+			 background-size: contain;
+			 height: 125px;
+			 width: 125px;
+			 position: absolute;
+			 bottom: -20px;
+			 right: -20px;
+		 }
+	 }
+}

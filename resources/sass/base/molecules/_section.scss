@@ -27,11 +27,16 @@
 }
 
 .m-section--colored {
-	background: linear-gradient(to bottom, $background 0%,$background 80%,$white 80%, $white 100%);
+	background-color: $background;
+	
+	@include FLOW-at($tablet){
+		background: linear-gradient(to bottom, $background 0%,$background 80%,$white 80%, $white 100%);
+	}
+
 }
 
 .m-section--coloredDark {
-	background: linear-gradient(to bottom, #DEE5EC 0%, #DEE5EC 80%,$white 80%, $white 100%);
+	background: linear-gradient(to bottom, #DEE5EC 0%, #DEE5EC 75%,$white 75%, $white 100%);
 }
 
 .m-section--white {

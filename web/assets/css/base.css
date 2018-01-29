@@ -1718,20 +1718,45 @@ fieldset:last-child {
   padding-left: 10px;
 }
 
+.m-bird__block {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 45em) {
+  .m-bird__block {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .m-bird__block__image {
   background-size: cover;
   background-position: center center;
+  min-height: 200px;
   height: 100%;
   position: relative;
   width: 100%;
 }
 
 .m-bird__block .icon-heart {
-  bottom: -30px;
+  bottom: -20px;
   color: #F55533;
-  font-size: 6em;
+  font-size: 3em;
   position: absolute;
-  left: -40px;
+  left: -25px;
+}
+
+@media screen and (min-width: 45em) {
+  .m-bird__block .icon-heart {
+    bottom: -30px;
+    font-size: 6em;
+    left: -40px;
+  }
 }
 
 .m-bird__block--small {
@@ -1785,13 +1810,19 @@ fieldset:last-child {
 }
 
 .m-section--colored {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F1F8FE), color-stop(80%, #F1F8FE), color-stop(80%, #FFFFFF), to(#FFFFFF));
-  background: linear-gradient(to bottom, #F1F8FE 0%, #F1F8FE 80%, #FFFFFF 80%, #FFFFFF 100%);
+  background-color: #F1F8FE;
+}
+
+@media screen and (min-width: 45em) {
+  .m-section--colored {
+    background: -webkit-gradient(linear, left top, left bottom, from(#F1F8FE), color-stop(80%, #F1F8FE), color-stop(80%, #FFFFFF), to(#FFFFFF));
+    background: linear-gradient(to bottom, #F1F8FE 0%, #F1F8FE 80%, #FFFFFF 80%, #FFFFFF 100%);
+  }
 }
 
 .m-section--coloredDark {
-  background: -webkit-gradient(linear, left top, left bottom, from(#DEE5EC), color-stop(80%, #DEE5EC), color-stop(80%, #FFFFFF), to(#FFFFFF));
-  background: linear-gradient(to bottom, #DEE5EC 0%, #DEE5EC 80%, #FFFFFF 80%, #FFFFFF 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#DEE5EC), color-stop(75%, #DEE5EC), color-stop(75%, #FFFFFF), to(#FFFFFF));
+  background: linear-gradient(to bottom, #DEE5EC 0%, #DEE5EC 75%, #FFFFFF 75%, #FFFFFF 100%);
 }
 
 .m-section--white {
@@ -1936,6 +1967,18 @@ fieldset:last-child {
   height: 100%;
   width: 100%;
   position: relative;
+}
+
+@media screen and (min-width: 45em) {
+  .o-page-intro__pigeon {
+    background-image: url("/assets/img/white_pigeon.png");
+    background-size: contain;
+    height: 125px;
+    width: 125px;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+  }
 }
 
 .o-language {

@@ -1,10 +1,10 @@
 <section class="m-section m-section--small m-section--colored">
 	<div class="container">
-		<div class="u-flex u-flex-space-between">
+		<div class="u-flex u-flex-space-between u-flex-wrap">
 			<section class="u-grid__col-1-2">
 				{% if entry.generic_header is not empty %}
 					<div class="o-page-intro__image" style="background-image: url('{{entry.generic_header.one().getVolume().path}}/{{entry.generic_header.one().filename}}')">
-						<div style="background-color: green;height: 100px; width: 100px;position:absolute; bottom: -20px; right: -20px;">
+						<div class="o-page-intro__pigeon">
 						</div>
 					</div>
 				{% endif %}
