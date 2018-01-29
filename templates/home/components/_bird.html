@@ -1,17 +1,23 @@
+<!--  Variable declaration -->
+{% set pigeon = entry.generic_pigeon.one() %}
+
+<!--  Render-->
 <section class="m-section m-section--small m-section--white">
 	<div class="container">
 		<div class="m-bird__block u-flex u-flex-space-between">
 
 			<div class="u-grid__col-1-2 u-padding">
-				<h1> Hi, I'm Collin </h1>
-				<p> Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum.
-						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. </p>
-				<h2> Color </h2>
-				<p> Aenean lacinia bibendum </p>
-				<h2> Color </h2>
-				<p> Aenean lacinia bibendum </p>
-				<h2> Color </h2>
-				<p> Aenean lacinia bibendum </p>
+				<h1> {{pigeon.title}}</h1>
+				<p> {{pigeon.generic_description}} </p>
+
+				{% if pigeon.pigeon_attributes is not empty %}
+						{% for attribute in pigeon.pigeon_attributes.all() %}
+							<div class="">
+								<h2> {{attribute.attribute_title}} </h2>
+								<p> {{attribute.attribute_description}} </p>
+							</div>
+						{% endfor %}
+				{% endif %}
 				<a href="/" class="a-button"> Discover more about this pigeon </a>
 			</div>
 

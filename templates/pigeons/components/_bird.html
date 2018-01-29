@@ -4,28 +4,28 @@
 	</div>
 
 	<div class="m-bird__block__content">
-		<h1> Hi, I'm Collin </h1>
-		<p> Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum.
-				Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. </p>
+		<h1> {{pigeon.title}}</h1>
+		<p> {{pigeon.generic_description}} </p>
 
-		<div class="u-flex u-flex-space-between u-flex-wrap">
-			<div class="u-grid__col-1-2">
-				<h2> Color </h2>
-				<p> Aenean lacinia bibendum </p>
+		{% if pigeon.pigeon_attributes is not empty %}
+			<div class="u-flex u-flex-space-between u-flex-wrap">
+				{% for attribute in pigeon.pigeon_attributes.all() %}
+					<div class="u-grid__col-1-2">
+						<h2> {{attribute.attribute_title}} </h2>
+						<p> {{attribute.attribute_description}} </p>
+					</div>
+				{% endfor %}
 			</div>
-			<div class="u-grid__col-1-2">
-				<h2> Color </h2>
-				<p> Aenean lacinia bibendum </p>
-			</div>
-			<div class="u-grid__col-1-2">
-				<h2> Color </h2>
-				<p> Aenean lacinia bibendum </p>
-			</div>
-		</div>
+		{% endif %}
 
 		<a href="" class="a-link">Download stambood <span class="icon-download"></span></a>
 
-		<a href="/" class="a-button a-button--filled"> Buy </a>
-		<a href="/" class="a-button"> Buy an egg </a>
+		{% if pigeon.pigeon_forsale == 1 %}
+			<a href="/" class="a-button a-button--filled"> Buy </a>
+		{% endif %}
+
+		{% if pigeon.pigeon_eggforsale == 1 %}
+			<a href="/" class="a-button"> Buy an egg </a>
+		{% endif %}
 	</div>
 </div>
