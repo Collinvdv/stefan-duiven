@@ -2,20 +2,16 @@
 {% set article = entry.generic_article.one() %}
 
 <!--  Render-->
-<section class="m-section m-section--coloredDark">
-	<div class="container">
-		<div class="o-article__block o-article__block--featured">
-			<div class="u-grid__col-1-2">
-				<div class="o-article__block__image" style="background-image: url('{{article.generic_header.one().getVolume().path}}/{{article.generic_header.one().filename}}')">
-				</div>
-			</div>
-
-			<div class="u-grid__col-1-2 u-padding">
-				<h1> {{article.title}} </h1>
-				<h4 class="o-article__block__date"> {{article.postDate|date("F dS, Y")}} </h4>
-				<p> {{article.generic_description}} </p>
-				<a class="a-link" href="/blog/{{article.slug}}"> Read more <span class="icon-arrow"></span></a>
-			</div>
+<div class="o-article__block o-article__block--featured">
+	<div class="u-grid__col-1-2">
+		<div class="o-article__block__image" style="background-image: url('{{article.generic_header.one().getVolume().path}}/{{article.generic_header.one().filename}}')">
 		</div>
 	</div>
-</section>
+
+	<div class="u-grid__col-1-2 u-padding">
+		<h1> {{article.title}} </h1>
+		<h4 class="o-article__block__date"> {{article.postDate|date("F dS, Y")}} </h4>
+		<p> {{article.generic_description}} </p>
+		<a class="a-link" href="/blog/{{article.slug}}"> Read more <span class="icon-arrow"></span></a>
+	</div>
+</div>

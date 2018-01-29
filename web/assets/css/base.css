@@ -1768,8 +1768,12 @@ fieldset:last-child {
 @media screen and (min-width: 45em) {
   .m-bird__block--small {
     margin-bottom: 40px;
-    margin-right: 30px;
-    width: calc(33% - 30px);
+    margin-right: 45px;
+    width: calc(33.33% - 30px);
+  }
+
+  .m-bird__block--small:nth-child(3) {
+    margin-right: 0;
   }
 }
 
@@ -1831,6 +1835,26 @@ fieldset:last-child {
   background: linear-gradient(to bottom, #DEE5EC 0%, #DEE5EC 75%, #FFFFFF 75%, #FFFFFF 100%);
 }
 
+.m-section--intro {
+  padding-bottom: 0;
+}
+
+.m-section--intro .container {
+  padding-bottom: 0;
+}
+
+.m-section--intro .container h1:before {
+  content: '';
+  background-image: url("/assets/img/white_pigeon.png");
+  background-size: contain;
+  display: inline-block;
+  left: -75px;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 34px;
+}
+
 .m-section--white {
   background: #FFFFFF;
 }
@@ -1871,6 +1895,33 @@ fieldset:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.o-article__block--small {
+  -webkit-box-shadow: 0 25px 50px 0 rgba(13, 21, 41, 0.06);
+          box-shadow: 0 25px 50px 0 rgba(13, 21, 41, 0.06);
+  width: 100%;
+}
+
+@media screen and (min-width: 45em) {
+  .o-article__block--small {
+    margin-bottom: 40px;
+    margin-right: 45px;
+    width: calc(33.33% - 30px);
+  }
+
+  .o-article__block--small:nth-child(3) {
+    margin-right: 0;
+  }
+}
+
+.o-article__block--small .o-article__block__content {
+  padding: 30px;
+}
+
+.o-article__block--small .o-article__block__image {
+  height: 200px;
+  margin-bottom: 20px;
 }
 
 .o-article-grid {

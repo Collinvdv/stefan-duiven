@@ -1,5 +1,20 @@
 {% extends "_layout" %}
 
 {% block content %}
-		<h1> blog </h1>
+	<!-- Title -->
+	<section class="m-section m-section--small m-section--intro">
+		<div class="container">
+			<h1> {{entry.title}} </h1>
+		</div>
+	</section>
+
+	<!-- Article -->
+	<section class="m-section m-section--small">
+		<div class="container">
+			{% include '/generic/_article.html' %}
+		</div>
+	</section>
+
+	<!--  Overview -->
+	{% include '/blog/components/_articles.html' %}
 {% endblock %}

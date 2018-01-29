@@ -1,0 +1,16 @@
+<div class="o-article__block o-article__block--small">
+	<!--  Image -->
+	{% if article.generic_header is not empty %}
+		<div class="o-article__block__image" style="background-image: url('{{article.generic_header.one().getVolume().path}}/{{article.generic_header.one().filename}}')">
+		</div>
+	{% endif %}
+
+	<!--  Content -->
+	<div class="o-article__block__content">
+		<h1> {{article.title}}</h1>
+		<p> {{article.generic_description}} </p>
+
+		<a href="" class="a-link">Download stambood <span class="icon-download"></span></a>
+
+	</div>
+</div>

@@ -1,6 +1,6 @@
 <!--  Variable declaration -->
-{% set pigeons = craft.entries ({
-									 section: 'pigeon',
+{% set articles = craft.entries ({
+									 section: 'article',
 									 limit: null
 }) %}
 
@@ -8,8 +8,8 @@
 <section class="m-section m-section--small">
 	<div class="container">
 		<div class="u-flex u-flex-wrap">
-			{% for pigeon in pigeons.all() %}
-				{% include '/pigeons/components/_bird.html' %}
+			{% for article in articles.all() %}
+				{% include '/blog/components/_article.html' %}
 			{% endfor %}
 		</div>
 	</div>

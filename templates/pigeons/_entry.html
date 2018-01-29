@@ -2,7 +2,7 @@
 
 {% block content %}
 	<!-- Title -->
-	<section class="m-section m-section--small">
+	<section class="m-section m-section--small m-section--intro">
 		<div class="container">
 			<h1> {{entry.title}} </h1>
 		</div>
@@ -15,5 +15,9 @@
 	{% include '/pigeons/components/_birds.html' %}
 
 	<!-- Article -->
-	{% include '/generic/_article.html' %}
+	<section class="m-section m-section--coloredDark">
+		<div class="container">
+			{% include '/generic/_article.html' %}
+		</div>
+	</section>
 {% endblock %}

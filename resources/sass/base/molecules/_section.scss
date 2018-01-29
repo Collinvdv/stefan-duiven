@@ -28,7 +28,7 @@
 
 .m-section--colored {
 	background-color: $background;
-	
+
 	@include FLOW-at($tablet){
 		background: linear-gradient(to bottom, $background 0%,$background 80%,$white 80%, $white 100%);
 	}
@@ -39,6 +39,27 @@
 	background: linear-gradient(to bottom, #DEE5EC 0%, #DEE5EC 75%,$white 75%, $white 100%);
 }
 
+.m-section--intro {
+	padding-bottom: 0;
+
+	.container {
+		padding-bottom: 0;
+
+		h1 {
+			&:before {
+				content: '';
+				background-image: url('/assets/img/white_pigeon.png');
+ 			 	background-size: contain;
+				display: inline-block;
+				left: -75px;
+				position: absolute;
+				height: 50px;
+				width: 50px;
+				top: 34px;
+			}
+		}
+	}
+}
 .m-section--white {
 	background: $white;
 }
