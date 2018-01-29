@@ -4,6 +4,9 @@
 	{% if pigeon.generic_header is not empty %}
 		<div class="m-bird__block__image" style="background-image: url('{{pigeon.generic_header.one().getVolume().path}}/{{pigeon.generic_header.one().filename}}')">
 		</div>
+	{% else %}
+		<div class="m-bird__block__image" style="background-image: url('/assets/img/placeholder.png')">
+		</div>
 	{% endif %}
 
 	<!--  Content -->
