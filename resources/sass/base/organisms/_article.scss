@@ -1,9 +1,16 @@
 // article - block
 .o-article__block {
+	flex-direction: column;
+
+	@include FLOW-at($tablet){
+		flex-direction: row;
+	}
+
 	&__image {
 		background-size: cover;
 		background-position: center center;
 		height: 100%;
+		min-height: 200px;
 		position: relative;
 		width: 100%;
 	}
@@ -11,7 +18,7 @@
 	&__date {
 		color: #C0C6CC;
 	}
-	
+
   // Modifier
 	&--featured {
 		background-color: $white;
