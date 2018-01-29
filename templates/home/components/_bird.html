@@ -22,10 +22,14 @@
 			</div>
 
 			<div class="u-grid__col-1-2 u-padding">
-				<div class="m-bird__block__image" style="background-image: url('/assets/img/pigeon2.jpg')">
-					<span class="icon-heart">
-					</span>
-				</div>
+				<!--  Image-->
+				{% if pigeon.generic_header is not empty %}
+					<div class="m-bird__block__image" style="background-image: url('{{pigeon.generic_header.one().getVolume().path}}/{{pigeon.generic_header.one().filename}}')">
+						<span class="icon-heart">
+						</span>
+					</div>
+				{% endif %}
+
 			</div>
 		</div>
 	</div>

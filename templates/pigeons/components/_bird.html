@@ -1,8 +1,12 @@
 
 <div class="m-bird__block m-bird__block--small">
-	<div class="m-bird__block__image" style="background-image: url('/assets/img/pigeon2.jpg')">
-	</div>
+	<!--  Image -->
+	{% if pigeon.generic_header is not empty %}
+		<div class="m-bird__block__image" style="background-image: url('{{pigeon.generic_header.one().getVolume().path}}/{{pigeon.generic_header.one().filename}}')">
+		</div>
+	{% endif %}
 
+	<!--  Content -->
 	<div class="m-bird__block__content">
 		<h1> {{pigeon.title}}</h1>
 		<p> {{pigeon.generic_description}} </p>
