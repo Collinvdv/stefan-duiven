@@ -1806,6 +1806,10 @@ fieldset:last-child {
   width: 100%;
 }
 
+.o-article__block__date {
+  color: #C0C6CC;
+}
+
 .o-article__block--featured {
   background-color: #FFFFFF;
   -webkit-box-shadow: 0 25px 50px 0 rgba(13, 21, 41, 0.06);
