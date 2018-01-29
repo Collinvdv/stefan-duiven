@@ -1926,6 +1926,14 @@ fieldset:last-child {
   margin-bottom: 2.1875rem;
 }
 
+.o-page-intro__image {
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
 .o-language {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -2,15 +2,17 @@
 	<div class="container">
 		<div class="u-flex u-flex-space-between">
 			<section class="u-grid__col-1-2">
-				<div style="background-color: red;height: 100%; width: 100%;position: relative;">
-					<div style="background-color: green;height: 100px; width: 100px;position:absolute; bottom: -20px; right: -20px;">
+				{% if entry.generic_header is not empty %}
+					<div class="o-page-intro__image" style="background-image: url('{{entry.generic_header.one().getVolume().path}}/{{entry.generic_header.one().filename}}')">
+						<div style="background-color: green;height: 100px; width: 100px;position:absolute; bottom: -20px; right: -20px;">
+						</div>
 					</div>
-				</div>
+				{% endif %}
+
 			</section>
 			<section class="u-grid__col-1-2 u-padding">
-				<h1> Hi, I'm Collin </h1>
-				<p> Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum.
-						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. </p>
+				<h1> {{entry.title}} </h1>
+				<p> {{entry.generic_description}} </p>
 				<a href="" class="a-link"> Mijn duifkes <span class="icon-arrow"></span></a>
 				<a href="" class="a-link"> Tips and tricks <span class="icon-arrow"></a>
 				<a href="" class="a-link"> Check our flight results <span class="icon-arrow"></a>
