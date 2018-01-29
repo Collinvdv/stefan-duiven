@@ -1734,6 +1734,23 @@ fieldset:last-child {
   left: -40px;
 }
 
+.m-bird__block--small {
+  -webkit-box-shadow: 0 25px 50px 0 rgba(13, 21, 41, 0.06);
+          box-shadow: 0 25px 50px 0 rgba(13, 21, 41, 0.06);
+  margin-bottom: 40px;
+  margin-right: 30px;
+  width: calc(33% - 30px);
+}
+
+.m-bird__block--small .m-bird__block__content {
+  padding: 30px;
+}
+
+.m-bird__block--small .m-bird__block__image {
+  height: 200px;
+  margin-bottom: 20px;
+}
+
 .m-section {
   padding: calc(2.5rem / 2) 0;
   position: relative;
