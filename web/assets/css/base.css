@@ -1959,6 +1959,10 @@ fieldset:last-child {
   margin-top: 40px;
 }
 
+.o-footer__navigation {
+  margin-bottom: 40px;
+}
+
 .o-footer__navigation__item {
   color: #0D1529;
   display: block;
