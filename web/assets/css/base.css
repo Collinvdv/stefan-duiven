@@ -1786,6 +1786,42 @@ fieldset:last-child {
   margin-bottom: 20px;
 }
 
+.m-flight {
+  -webkit-box-shadow: 0 3px 15px 0 rgba(13, 21, 41, 0.06);
+          box-shadow: 0 3px 15px 0 rgba(13, 21, 41, 0.06);
+  color: #0D1529;
+  padding: 30px 40px;
+}
+
+.m-flight__title {
+  color: #0D1529;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.m-flight__detail {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.m-flight__detail__title {
+  color: #C0C6CC;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.m-flight__detail__content {
+  font-family: "Roboto ", serif;
+  font-size: 18px;
+}
+
 .m-section {
   padding: calc(2.5rem / 2) 0;
   position: relative;

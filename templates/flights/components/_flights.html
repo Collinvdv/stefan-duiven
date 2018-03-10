@@ -1,0 +1,14 @@
+<!--  Variable declaration -->
+{% set flights = craft.entries ({
+									 section: 'flight',
+									 limit: null
+}) %}
+
+<!--  Grid of the programs -->
+<section class="m-section m-section--small">
+	<div class="container">
+			{% for flight in flights.all() %}
+				{% include '/flights/components/_flight.html' %}
+			{% endfor %}
+	</div>
+</section>
