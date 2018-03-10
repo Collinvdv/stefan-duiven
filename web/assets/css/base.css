@@ -1793,6 +1793,37 @@ fieldset:last-child {
   padding: 30px 40px;
 }
 
+.m-flight table {
+  margin-top: 40px;
+}
+
+.m-flight table thead tr th {
+  background-color: #FFFFFF;
+  border: 0;
+  border-bottom: 3px solid #DEE5EC !important;
+  border-top: 3px solid #DEE5EC !important;
+  color: #C0C6CC;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: bold;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  text-align: left;
+}
+
+.m-flight table tbody tr td {
+  border: none;
+  font-family: "Roboto ", serif;
+  text-transform: uppercase;
+}
+
+.m-flight table tbody tr:nth-child(odd) {
+  background-color: #F7FBFE;
+}
+
+.m-flight table tbody tr:nth-child(even) {
+  background-color: #FFFFFF;
+}
+
 .m-flight__title {
   color: #0D1529;
   font-family: "Roboto Slab", sans-serif;

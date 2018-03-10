@@ -3,6 +3,39 @@
 	box-shadow: 0 3px 15px 0 rgba(13,21,41,0.06);
 	color: $black;
 	padding: 30px 40px;
+
+	table {
+		margin-top: 40px;
+
+		thead tr th {
+			background-color: $white;
+			border: 0;
+			border-bottom: 3px solid #DEE5EC !important;
+			border-top: 3px solid #DEE5EC !important;
+			color: #C0C6CC;
+			font-family: $font-family-secondary;
+			font-weight: bold;
+			padding-bottom: 30px;
+			padding-top: 30px;
+			text-align: left;
+		}
+
+		tbody tr td {
+			border: none;
+			font-family: $font-family-primary;
+			text-transform: uppercase;
+		}
+
+		tbody {
+			tr:nth-child(odd) {
+				background-color: #F7FBFE;
+			}
+
+			tr:nth-child(even) {
+				background-color: $white;
+			}
+		}
+	}
 }
 
 .m-flight__title {
