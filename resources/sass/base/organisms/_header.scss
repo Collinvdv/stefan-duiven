@@ -21,11 +21,10 @@
 
 	&__navigation {
 
-
 		&__item {
 			color: $font-color-gray;
 			align-items: center;
-			display: inline-flex;
+			display: none;
 			flex-direction: column;
 			margin: 5px 30px;
 			text-decoration: none;
@@ -45,6 +44,83 @@
 					width: 20px;
 				}
 			}
+
+			@include FLOW-at($mobile){
+				display: inline-flex;
+			}
+		}
+	}
+}
+
+.o-header__hamburger {
+	display: flex;
+	align-items: center;
+
+	@include FLOW-at($desktop) {
+		display: none;
+	}
+}
+
+// -------------------------------------------------------------------
+// :: HAMBURGER
+// -------------------------------------------------------------------
+.a-hamburger {
+	cursor: pointer;
+	display: inline-block;
+}
+
+
+// -------------------------------------------------------------------
+// :: HAMBURGER ELEMENTS
+// -------------------------------------------------------------------
+.a-hamburger__bar {
+	background-color: $primary-color;
+	border-radius: rem(2px);
+	display: block;
+	height: rem(3px);
+	width: 20px;
+	margin-bottom: 4px;
+
+	&:nth-child(3) {
+		margin-bottom: 0;
+	}
+}
+
+
+// -------------------------------------------------------------------
+// :: HAMBURGER MODIFIERS
+// -------------------------------------------------------------------
+.o-mobile-menu {
+	.a-hamburger.is-open {
+		top: 5px;
+		right: -20px;
+	}
+
+	.a-hamburger.is-open .a-hamburger__bar {
+		background-color: $white;
+		height: rem(2px);
+		z-index: 700;
+
+		&:nth-child(1) {
+			left: 50%;
+			top: rem(9px);
+			width: 0%;
+		}
+
+		&:nth-child(2) {
+			transform: rotate(45deg);
+			width: 100%;
+		}
+
+		&:nth-child(3) {
+			transform: rotate(-45deg);
+			width: 100%;
+		}
+
+		&:nth-child(4) {
+			left: 50%;
+			top: rem(9px);
+			width: 0%;
 		}
 	}
 }

@@ -2086,9 +2086,7 @@ fieldset:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2109,6 +2107,82 @@ fieldset:last-child {
   margin-top: 4px;
   height: 3px;
   width: 20px;
+}
+
+@media screen and (min-width: 30em) {
+  .o-header__navigation__item {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
+.o-header__hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 60em) {
+  .o-header__hamburger {
+    display: none;
+  }
+}
+
+.a-hamburger {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.a-hamburger__bar {
+  background-color: #40A5F3;
+  border-radius: 0.125rem;
+  display: block;
+  height: 0.1875rem;
+  width: 20px;
+  margin-bottom: 4px;
+}
+
+.a-hamburger__bar:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.o-mobile-menu .a-hamburger.is-open {
+  top: 5px;
+  right: -20px;
+}
+
+.o-mobile-menu .a-hamburger.is-open .a-hamburger__bar {
+  background-color: #FFFFFF;
+  height: 0.125rem;
+  z-index: 700;
+}
+
+.o-mobile-menu .a-hamburger.is-open .a-hamburger__bar:nth-child(1) {
+  left: 50%;
+  top: 0.5625rem;
+  width: 0%;
+}
+
+.o-mobile-menu .a-hamburger.is-open .a-hamburger__bar:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 100%;
+}
+
+.o-mobile-menu .a-hamburger.is-open .a-hamburger__bar:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 100%;
+}
+
+.o-mobile-menu .a-hamburger.is-open .a-hamburger__bar:nth-child(4) {
+  left: 50%;
+  top: 0.5625rem;
+  width: 0%;
 }
 
 .o-page-intro {
