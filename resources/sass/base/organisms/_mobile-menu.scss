@@ -1,0 +1,59 @@
+// -------------------------------------------------------------------
+// :: MOBILE-MENU
+// -------------------------------------------------------------------
+.o-mobile-menu{
+	-webkit-overflow-scrolling: touch;
+	background-color: $background;
+	color: $white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	overflow-y: auto;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	transform: translateX(-100vw);
+	z-index: $z-index-highest;
+	opacity: 0;
+	transition: transform 0.3s ease-in-out, opacity 0s 0.3s;
+
+	@include FLOW-at($desktop) {
+		display: none;
+	}
+}
+
+// -------------------------------------------------------------------
+// :: MOBILE-MENU ELEMENTS
+// -------------------------------------------------------------------
+.o-mobile-menu__header {
+	background-color: $white;
+}
+
+.o-mobile-menu__navigation {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	&__item {
+		display: block;
+		font-size: 7vw;
+		margin-top: 30px;
+		width: 100%;
+		text-align: center;
+		text-decoration: none;
+
+		&.is-active {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+// -------------------------------------------------------------------
+// :: MOBILE-MENU MODIFIERES
+// -------------------------------------------------------------------
+.o-mobile-menu.is-open {
+	opacity: 1;
+	transform: translateX(0);
+	transition: transform 0.3s ease-in-out, opacity 0s;
+}

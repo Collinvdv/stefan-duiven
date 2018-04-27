@@ -36,3 +36,40 @@
 
 	</div>
 </header>
+
+
+<!--  Mobile menu-->
+<div class="o-mobile-menu" id="o-mobile-menu">
+	<div>
+		<div class="o-mobile-menu__header">
+			<div class="u-container">
+				<div class="u-flex u-flex-space-between u-flex-align-center">
+					<div class="u-flex u-flex-align-center">
+						<a class="o-header__logo" href="{{siteUrl()}}">
+							VANDEVELDE pigeons
+						</a>
+					</div>
+					<!-- <a class="js-menu-toggle o-mobile-menu__close-btn">close menu</a> -->
+				</div>
+			</div>
+		</div>
+
+		<nav class="o-mobile-menu__navigation" role="navigation" >
+			<a class="o-mobile-menu__navigation__item {{ craft.app.request.pathInfo == 'flights' ? 'is-active'}}" href="/flights">
+					Flight result
+			</a>
+
+			<a class="o-mobile-menu__navigation__item {{ craft.app.request.pathInfo == 'pigeons' ? 'is-active'}}" href="/pigeons">
+					Discover our pigeons
+			</a>
+
+			<!-- <a class="o-mobile-menu__navigation__item {{ craft.app.request.pathInfo == 'blog' ? 'is-active'}}" href="/blog">
+					Blog
+			</a> -->
+
+			<a class="o-mobile-menu__navigation__item a-button" href="/contact">
+				Contact me
+			</a>
+		</nav>
+	</div>
+</div>
