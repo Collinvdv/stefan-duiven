@@ -2,51 +2,39 @@
 	<!--  Header -->
 	<div class="u-flex u-flex-space-between u-flex-wrap">
 		<h2 class="m-flight__title">{{flight.title}}</h2>
-		<a href="" class="a-link"> Download resultaat als bestand <span class="icon-arrow"></span></a>
+		<a href="" class="a-link"> Download resultaat als bestand <span class="icon-download"></span></a>
 	</div>
 
 	<!--  Details -->
-	<div class="u-flex u-flex-space-between">
+	<div class="u-flex u-flex-space-between u-flex-wrap">
 		<!--  Vlucht datum-->
 		<div class="m-flight__detail">
 			<span class="m-flight__detail__title"> Vlucht datum </span>
-			<span class="m-flight__detail__content"> 03/08/2018 </span>
+			<span class="m-flight__detail__content"> {{flight.flight_date|date("d-m-Y") }}</span>
 		</div>
 
 		<!--  Vlucht datum-->
 		<div class="m-flight__detail">
-			<span class="m-flight__detail__title"> Vlucht datum </span>
-			<span class="m-flight__detail__content"> 03/08/2018 </span>
+			<span class="m-flight__detail__title"> # deelnemers</span>
+			<span class="m-flight__detail__content"> {{flight.flight_deelnemers}} </span>
 		</div>
 
 		<!--  Vlucht datum-->
 		<div class="m-flight__detail">
-			<span class="m-flight__detail__title"> Vlucht datum </span>
-			<span class="m-flight__detail__content"> 03/08/2018 </span>
+			<span class="m-flight__detail__title"> Weeromstandigheden </span>
+			<span class="m-flight__detail__content"> {{flight.flight_weather[0].title}} </span>
 		</div>
 
 		<!--  Vlucht datum-->
 		<div class="m-flight__detail">
-			<span class="m-flight__detail__title"> Vlucht datum </span>
-			<span class="m-flight__detail__content"> 03/08/2018 </span>
+			<span class="m-flight__detail__title"> Afstand </span>
+			<span class="m-flight__detail__content"> {{flight.flight_distance}}</span>
 		</div>
 
 		<!--  Vlucht datum-->
 		<div class="m-flight__detail">
-			<span class="m-flight__detail__title"> Vlucht datum </span>
-			<span class="m-flight__detail__content"> 03/08/2018 </span>
-		</div>
-
-		<!--  Vlucht datum-->
-		<div class="m-flight__detail">
-			<span class="m-flight__detail__title"> Vlucht datum </span>
-			<span class="m-flight__detail__content"> 03/08/2018 </span>
-		</div>
-
-		<!--  Vlucht datum-->
-		<div class="m-flight__detail">
-			<span class="m-flight__detail__title"> Vlucht datum </span>
-			<span class="m-flight__detail__content"> 03/08/2018 </span>
+			<span class="m-flight__detail__title"> # views </span>
+			<span class="m-flight__detail__content"> {{flight.flight_views}}</span>
 		</div>
 	</div>
 
@@ -56,139 +44,53 @@
 		<thead>
 			<tr>
 				<th>
-					test
+					nr
 				</th>
 
 				<th>
-					test
+					naam
 				</th>
 
 				<th>
-					test
+					afstand
 				</th>
 
 				<th>
-					test
+					ring
 				</th>
 
 				<th>
-					test
+					snelheid
 				</th>
 			</tr>
 		</thead>
 
 		<tbody>
-			<tr>
-				<td>
-					test
-				</td>
+			{% if flight.flight_result_item is not empty %}
+				{% for flight_result_item in flight.flight_result_item.all() %}
+					<tr>
+						<td>
+							{{flight_result_item.position}}
+						</td>
 
-				<td>
-					test
-				</td>
+						<td>
+							VAN DE VELDE STEFAN
+						</td>
 
-				<td>
-					test
-				</td>
+						<td>
+							{{flight_result_item.distance}}
+						</td>
 
-				<td>
-					test
-				</td>
+						<td>
+							{{flight_result_item.pigeon.one().pigeon_ringnumber}}
+						</td>
 
-				<td>
-					test
-				</td>
-			</tr>
-
-			<tr>
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-			</tr>
-
-			<tr>
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-			</tr>
-
-			<tr>
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-			</tr>
-
-			<tr>
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-
-				<td>
-					test
-				</td>
-			</tr>
-
-
+						<td>
+							{{flight_result_item.snelheid}}
+						</td>
+					</tr>
+				{% endfor %}
+			{% endif %}
 		</tbody>
 	</table>
 </div>

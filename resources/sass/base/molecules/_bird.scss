@@ -20,7 +20,11 @@
 		color: #F55533;
 		font-size: 3em;
 		position:absolute;
-		left: -25px;
+		left: -10px;
+
+		@include FLOW-at($mobile){
+			left: -25px;
+		}
 
 		@include FLOW-at($tablet){
 			bottom: -30px;
