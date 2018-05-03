@@ -1,6 +1,7 @@
 // article - block
 .m-bird__block {
-	flex-direction: column-reverse;
+	flex-direction: column;
+	margin-bottom: 35px;
 
 	@include FLOW-at($tablet){
 		flex-direction: row;
@@ -55,5 +56,13 @@
 			height: 200px;
 			margin-bottom: 20px;
 		}
+	}
+}
+
+.m-bird__block--home {
+	flex-direction: column-reverse;
+
+	@include FLOW-at($tablet){
+		flex-direction: row;
 	}
 }

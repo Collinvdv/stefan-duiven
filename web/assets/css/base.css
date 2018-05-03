@@ -49,6 +49,13 @@
           justify-content: space-between;
 }
 
+.u-flex--reversedRow {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
 .u-hidden {
   width: 1px !important;
   height: 1px !important;
@@ -108,6 +115,16 @@ section {
 @media screen and (min-width: 45em) {
   .u-padding {
     padding: 3.5rem;
+  }
+}
+
+.u-padding--small {
+  padding: 1.75rem;
+}
+
+@media screen and (min-width: 45em) {
+  .u-padding--small {
+    padding: 1.75rem;
   }
 }
 
@@ -853,6 +870,11 @@ button {
   vertical-align: text-top;
 }
 
+.a-button--small {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
 .a-button [class*='icon']:before {
   position: relative;
 }
@@ -960,9 +982,9 @@ textarea {
   font-size: 0.875rem;
   padding: 0.6rem 0.6rem 0.4rem;
   background-color: #FFFFFF;
-  border: 1px solid #D9E5F6;
-  -webkit-box-shadow: 0 0.25em 0 -0.1em rgba(47, 55, 66, 0.045);
-          box-shadow: 0 0.25em 0 -0.1em rgba(47, 55, 66, 0.045);
+  border: 2px solid #C0C6CC;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border-radius: 0;
   width: 100%;
   -webkit-transition: border 100ms ease-in-out;
@@ -1720,9 +1742,10 @@ fieldset:last-child {
 
 .m-bird__block {
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 35px;
 }
 
 @media screen and (min-width: 45em) {
@@ -1790,6 +1813,27 @@ fieldset:last-child {
 .m-bird__block--small .m-bird__block__image {
   height: 200px;
   margin-bottom: 20px;
+}
+
+.m-bird__block--home {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 45em) {
+  .m-bird__block--home {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.m-contact {
+  -webkit-box-shadow: 0 0 50px 0 rgba(13, 21, 41, 0.06);
+          box-shadow: 0 0 50px 0 rgba(13, 21, 41, 0.06);
 }
 
 .m-flight {

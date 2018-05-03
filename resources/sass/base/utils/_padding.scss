@@ -10,6 +10,14 @@
 	}
 }
 
+%__u-padding--small {
+	padding: $default-padding-mobile;
+
+	@include FLOW-at($tablet){
+		padding: $default-padding-mobile;
+	}
+}
+
 %__u-padding--vertical{
 	padding-top: $default-padding-mobile;
 	padding-bottom: $default-padding-mobile;
@@ -32,6 +40,10 @@
 
 .u-padding{
 	@extend %__u-padding;
+}
+
+.u-padding--small {
+	@extend %__u-padding--small;
 }
 
 .u-padding--vertical{
