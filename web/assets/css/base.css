@@ -1840,7 +1840,24 @@ fieldset:last-child {
   -webkit-box-shadow: 0 3px 15px 0 rgba(13, 21, 41, 0.06);
           box-shadow: 0 3px 15px 0 rgba(13, 21, 41, 0.06);
   color: #0D1529;
-  padding: 30px 40px;
+}
+
+@media screen and (min-width: 45em) {
+  .m-flight {
+    padding: 30px 40px;
+  }
+}
+
+@media screen and (max-width: 45em) {
+  .m-flight .m-flight__title,
+  .m-flight .m-flight__detail,
+  .m-flight .a-link {
+    padding: 0 20px;
+  }
+
+  .m-flight .m-flight__title {
+    padding-top: 20px;
+  }
 }
 
 .m-flight table {
@@ -1860,10 +1877,40 @@ fieldset:last-child {
   text-align: left;
 }
 
+@media screen and (max-width: 45em) {
+  .m-flight table thead tr th {
+    display: none;
+  }
+}
+
 .m-flight table tbody tr td {
   border: none;
   font-family: "Roboto ", serif;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 45em) {
+  .m-flight table tbody tr td {
+    display: none;
+  }
+}
+
+.m-flight table tbody tr td.m-flight__table--mobile {
+  padding: 20px;
+  display: block;
+}
+
+.m-flight table tbody tr td.m-flight__table--mobile .m-flight__table__label--mobile {
+  color: rgba(13, 21, 41, 0.72);
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 45em) {
+  .m-flight table tbody tr td.m-flight__table--mobile {
+    display: none;
+  }
 }
 
 .m-flight table tbody tr:nth-child(odd) {

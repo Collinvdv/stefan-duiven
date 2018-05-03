@@ -69,6 +69,19 @@
 			{% if flight.flight_result_item is not empty %}
 				{% for flight_result_item in flight.flight_result_item.all() %}
 					<tr>
+						<td class="m-flight__table--mobile">
+							<span class="m-flight__table__label--mobile"> Positie</span>
+							{{flight_result_item.position}} <br>
+							<span class="m-flight__table__label--mobile"> Naam</span>
+							VAN DE VELDE STEFAN <br>
+							<span class="m-flight__table__label--mobile"> Afstand</span>
+							{{flight_result_item.distance}} <br>
+							<span class="m-flight__table__label--mobile"> Ringnummer </span>
+							{{flight_result_item.pigeon.one().pigeon_ringnumber}}
+							<span class="m-flight__table__label--mobile"> Snelheid </span>
+							{{flight_result_item.snelheid}}
+
+						</td>
 						<td>
 							{{flight_result_item.position}}
 						</td>
