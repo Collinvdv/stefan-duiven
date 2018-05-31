@@ -23,10 +23,10 @@
 	&__navigation {
 		display: none;
 
-		@include FLOW-at($mobile){
+		@include FLOW-at($desktop){
 			display: block;
 		}
-		
+
 		&__item {
 			color: $font-color-gray;
 			align-items: center;

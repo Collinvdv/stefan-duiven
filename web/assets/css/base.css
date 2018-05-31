@@ -114,6 +114,12 @@ section {
 
 @media screen and (min-width: 45em) {
   .u-padding {
+    padding: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .u-padding {
     padding: 3.5rem;
   }
 }
@@ -2176,7 +2182,7 @@ fieldset:last-child {
   display: none;
 }
 
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 60em) {
   .o-header__navigation {
     display: block;
   }

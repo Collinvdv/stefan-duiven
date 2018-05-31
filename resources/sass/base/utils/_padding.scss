@@ -6,6 +6,10 @@
 	padding: $default-padding-mobile;
 
 	@include FLOW-at($tablet){
+		padding: $default-padding-tablet;
+	}
+
+	@include FLOW-at($desktop){
 		padding: $default-padding;
 	}
 }
