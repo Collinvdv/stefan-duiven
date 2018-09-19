@@ -11,7 +11,7 @@
 
 	<!--  Content -->
 	<div class="m-bird__block__content">
-		<h1> {{pigeon.title}}</h1>
+		<h1> {{pigeon.title}} </h1>
 		<p> {{pigeon.generic_description}} </p>
 
 		{% if pigeon.pigeon_attributes is not empty %}
@@ -25,7 +25,9 @@
 			</div>
 		{% endif %}
 
-		<a href="" class="a-link">Download stambood <span class="icon-download"></span></a>
+		{% if pigeon.pigeon_stamboom is not empty %}
+			<a href="/assets/img/general/{{pigeon.pigeon_stamboom.first().filename}}" class="a-link" target="_blank">Download stambood <span class="icon-download"></span></a>
+		{% endif %}
 
 		{% if pigeon.pigeon_forsale == 1 %}
 			<a href="/" class="a-button a-button--filled"> Buy </a>

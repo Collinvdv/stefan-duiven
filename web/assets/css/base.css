@@ -1846,6 +1846,7 @@ fieldset:last-child {
   -webkit-box-shadow: 0 3px 15px 0 rgba(13, 21, 41, 0.06);
           box-shadow: 0 3px 15px 0 rgba(13, 21, 41, 0.06);
   color: #0D1529;
+  margin-bottom: 40px;
 }
 
 @media screen and (min-width: 45em) {

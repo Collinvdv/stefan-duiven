@@ -2,7 +2,9 @@
 	<!--  Header -->
 	<div class="u-flex u-flex-space-between u-flex-wrap">
 		<h2 class="m-flight__title">{{flight.title}}</h2>
-		<a href="" class="a-link"> Download resultaat als bestand <span class="icon-download"></span></a>
+		{% if flight.flight_result is not empty %}
+			<a href="/assets/img/general/{{flight.flight_result.first().filename}}" class="a-link" target="_blank">Download resultaat in pdf <span class="icon-download"></span></a>
+		{% endif %}
 	</div>
 
 	<!--  Details -->

@@ -2,6 +2,7 @@
 .m-flight {
 	box-shadow: 0 3px 15px 0 rgba(13,21,41,0.06);
 	color: $black;
+	margin-bottom: 40px;
 
 	@include FLOW-at($tablet) {
 		padding: 30px 40px;
