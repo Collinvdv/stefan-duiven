@@ -1772,6 +1772,20 @@ fieldset:last-child {
   width: 100%;
 }
 
+.m-bird__block__more {
+  background: #0D1529;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 20px 0;
+}
+
+.m-bird__block__more:hover {
+  background: rgba(13, 21, 41, 0.8);
+}
+
 .m-bird__block .icon-heart {
   bottom: -20px;
   color: #F55533;
