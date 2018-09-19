@@ -5,6 +5,23 @@
 	<!-- Installations -->
 	{% include '/home/components/_intro.html' %}
 
+	<!--  Variable declaration -->
+	{% set flights = craft.entries ({
+	section: 'flight',
+	limit: 1,
+	orderBy: 'flight_date DESC'
+	}) %}
+
+	<!--  Grid of the programs -->
+	<section class="m-section m-section--small">
+		<div class="container">
+			<h1> Laatse Resultaat </h1>
+			{% for flight in flights.all() %}
+			{% include '/flights/components/_flight.html' with { pigeon: null } %}
+			{% endfor %}
+		</div>
+	</section>
+
 	<!-- Bird -->
 	{% include '/home/components/_bird.html' %}
 

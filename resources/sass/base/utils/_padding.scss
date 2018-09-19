@@ -57,3 +57,7 @@
 .u-padding--horizontal {
 	@extend %__u-padding--horizontal;
 }
+
+.u-no-padding-left {
+	padding-left: 0 !important;
+}
