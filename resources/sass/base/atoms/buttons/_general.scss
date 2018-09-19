@@ -90,3 +90,8 @@
 .a-button [class*='icon'] + span {
 	margin-left: 1em;
 }
+
+.a-button--fullWidth {
+	width: 100%;
+	padding: 5px;
+}
