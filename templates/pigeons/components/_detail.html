@@ -24,7 +24,7 @@
 
 		<!--  Content -->
 		<div class="m-bird__block__content">
-			<h1> {{entry.title}} </h1>
+			<h1> Paspoort </h1>
 			<p> {{entry.generic_description}} </p>
 
 			{% if entry.pigeon_attributes is not empty %}
@@ -43,18 +43,33 @@
 			{% endif %}
 
 			{% if entry.pigeon_forsale == 1 %}
-			<a href="/" class="a-button a-button--filled"> Buy </a>
+				<a href="/" class="a-button a-button--filled"> Buy </a>
 			{% endif %}
 
 			{% if entry.pigeon_eggforsale == 1 %}
-			<a href="/" class="a-button"> Buy an egg </a>
+				<a href="/" class="a-button"> Buy an egg </a>
 			{% endif %}
 		</div>
 	</div>
-
-
-
 </section>
+
+<!--  Variable declaration -->
+{% set flights = craft.entries ({
+	section: 'flight',
+	limit: null,
+	orderBy: 'flight_date DESC'
+}) %}
+
+<!--  Grid of the programs -->
+<section class="m-section m-section--small">
+	<div class="container">
+		<h1> Resultaten </h1>
+		{% for flight in flights.all() %}
+			{% include '/flights/components/_flight.html' with { pigeon: entry } %}
+		{% endfor %}
+	</div>
+</section>
+
 
 
 {% endblock %}
