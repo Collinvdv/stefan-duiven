@@ -1,0 +1,42 @@
+<div class="u-flex u-flex-wrap">
+{% for flight_result_item in flight.flight_result_item.all() %}
+	{% set pigeon = flight_result_item.pigeon.one() %}
+	<div class="m-bird__block m-bird__block--small">
+		<!--  Image -->
+		{% if pigeon.generic_header is not empty %}
+		<div class="m-bird__block__image" style="background-image: url('/{{pigeon.generic_header.one().getVolume().path}}/{{pigeon.generic_header.one().filename}}')">
+		</div>
+		{% else %}
+		<div class="m-bird__block__image" style="background-image: url('/assets/img/placeholder.png')">
+		</div>
+		{% endif %}
+
+		<!--  Content -->
+		<div class="m-bird__block__content">
+			<h1> {{pigeon.title}} </h1>
+
+			<div class="u-flex u-flex-space-between u-flex-wrap">
+				<div class="u-grid__col-1-1">
+					<h2> Positie </h2>
+					<p> {{flight_result_item.position}} </p>
+				</div>
+				<div class="u-grid__col-1-1">
+					<h2> Snelheid </h2>
+					{{flight_result_item.snelheid}}
+				</div>
+				<div class="u-grid__col-1-1">
+					<h2> Afstand </h2>
+					{{flight_result_item.snelheid}}
+				</div>
+
+			</div>
+
+			<a class="a-button a-button--filled a-button--fullWidth" href="/pigeon/{{pigeon.slug}}"> Lees meer </a>
+		</div>
+
+
+	</div>
+
+
+{% endfor %}
+</div>

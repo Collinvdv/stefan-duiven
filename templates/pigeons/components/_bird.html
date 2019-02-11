@@ -2,7 +2,7 @@
 <div class="m-bird__block m-bird__block--small">
 	<!--  Image -->
 	{% if pigeon.generic_header is not empty %}
-		<div class="m-bird__block__image" style="background-image: url('{{pigeon.generic_header.one().getVolume().path}}/{{pigeon.generic_header.one().filename}}')">
+		<div class="m-bird__block__image" style="background-image: url('{{pigeon.generic_header.one().getVolume().path}}/{{pigeon.generic_header.one().filename}}');background-position: {{pigeon.generic_position}} center">
 		</div>
 	{% else %}
 		<div class="m-bird__block__image" style="background-image: url('/assets/img/placeholder.png')">
@@ -11,32 +11,39 @@
 
 	<!--  Content -->
 	<div class="m-bird__block__content">
-		<h1> {{pigeon.title}} </h1>
-		<p> {{pigeon.generic_description}} </p>
+		<div class="m-bird__block__text">
+			<h1> {{pigeon.title}} </h1>
+			<p> {{pigeon.generic_description}} </p>
 
-		{% if pigeon.pigeon_attributes is not empty %}
-			<div class="u-flex u-flex-space-between u-flex-wrap">
-				{% for attribute in pigeon.pigeon_attributes.all() %}
-					<div class="u-grid__col-1-2">
-						<h2> {{attribute.attribute_title}} </h2>
-						<p> {{attribute.attribute_description}} </p>
-					</div>
-				{% endfor %}
-			</div>
-		{% endif %}
+			{% if pigeon.pigeon_attributes is not empty %}
+				<div class="u-flex u-flex-space-between u-flex-wrap">
+					{% for attribute in pigeon.pigeon_attributes.all() %}
+						<div class="u-grid__col-1-2">
+							<h2> {{attribute.attribute_title}} </h2>
+							<p> {{attribute.attribute_description}} </p>
+						</div>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
 
-		{% if pigeon.pigeon_stamboom is not empty %}
+		<div class="m-bird__actions">
+			{% if pigeon.pigeon_stamboom is not empty %}
 			<a href="/assets/img/general/{{pigeon.pigeon_stamboom.first().filename}}" class="a-link" target="_blank">Download stambood <span class="icon-download"></span></a>
-		{% endif %}
+			{% endif %}
 
-		{% if pigeon.pigeon_forsale == 1 %}
+			{% if pigeon.pigeon_forsale == 1 %}
 			<a href="/" class="a-button a-button--fullWidth"> Buy </a>
-		{% endif %}
+			{% endif %}
 
-		{% if pigeon.pigeon_eggforsale == 1 %}
+			{% if pigeon.pigeon_eggforsale == 1 %}
 			<a href="/" class="a-button a-button--fullWidth "> Buy an egg </a>
-		{% endif %}
+			{% endif %}
+
+			<a class="a-button a-button--filled a-button--fullWidth" href="/pigeon/{{pigeon.slug}}"> Lees meer </a>
+		</div>
+
 	</div>
 
-	<a class="m-bird__block__more" href="/pigeon/{{pigeon.slug}}"> Lees meer </a>
+
 </div>

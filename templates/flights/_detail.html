@@ -1,0 +1,27 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+	<!-- Title -->
+	<section class="m-section m-section--small m-section--intro">
+		<div class="container">
+			<h1> {{entry.title}} </h1>
+		</div>
+	</section>
+
+	<!-- FLights overview -->
+	<section class="m-section m-section--small">
+		<div class="container">
+			{% include '/flights/components/_flight.html' with {pigeon: null, flight: entry} %}
+		</div>
+	</section>
+
+	<!-- Pigeon overview -->
+	<section class="m-section m-section--small">
+		<div class="container">
+			<h1> De duiven </h1>
+			{% include '/flights/components/_pigeon.html' with {flight: entry} %}
+		</div>
+	</section>
+
+{% endblock %}

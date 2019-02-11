@@ -20,11 +20,11 @@
   },
   "require": {
     "php": ">=7.0.0",
-    "craftcms/cms": "^3.0.0-RC1",
+    "craftcms/cms": "3.1.8",
     "vlucas/phpdotenv": "^2.4.0",
     "roave/security-advisories": "dev-master",
-    "nystudio107/craft3-minify": "1.2.6",
-    "nystudio107/craft3-instantanalytics": "1.0.4"
+    "nystudio107/craft3-minify": "1.2.9",
+    "nystudio107/craft3-instantanalytics": "1.1.0"
   },
   "autoload": {
     "psr-4": {
