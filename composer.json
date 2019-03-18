@@ -23,8 +23,7 @@
     "craftcms/cms": "3.1.8",
     "vlucas/phpdotenv": "^2.4.0",
     "roave/security-advisories": "dev-master",
-    "nystudio107/craft3-minify": "1.2.9",
-    "nystudio107/craft3-instantanalytics": "1.1.0"
+    "craftcms/contact-form": "2.2.3"
   },
   "autoload": {
     "psr-4": {

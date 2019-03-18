@@ -38,16 +38,16 @@
 
 
 	<body>
-		{% minify html %}
-			{% include '/generic/_header.html' %}
 
-			<main id="content" role="main">
-				{% block content %}
-				{% endblock %}
-			</main>
+		{% include '/generic/_header.html' %}
 
-			{% include '/generic/_footer.html' %}
-		{% endminify %}
+		<main id="content" role="main">
+			{% block content %}
+			{% endblock %}
+		</main>
+
+		{% include '/generic/_footer.html' %}
+
 	</body>
 	<script src="/assets/js/app.js"></script>
 	{% block footer %}

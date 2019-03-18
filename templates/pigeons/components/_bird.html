@@ -29,7 +29,7 @@
 
 		<div class="m-bird__actions">
 			{% if pigeon.pigeon_stamboom is not empty %}
-			<a href="/assets/img/general/{{pigeon.pigeon_stamboom.first().filename}}" class="a-link" target="_blank">Download stambood <span class="icon-download"></span></a>
+			<a href="/assets/img/general/{{pigeon.pigeon_stamboom.one().filename}}" class="a-link" target="_blank">Download stambood <span class="icon-download"></span></a>
 			{% endif %}
 
 			{% if pigeon.pigeon_forsale == 1 %}
