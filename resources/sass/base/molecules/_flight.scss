@@ -4,6 +4,13 @@
 	color: $black;
 	margin-bottom: 75px;
 
+	transition: box-shadow .5s cubic-bezier(.165,.84,.44,1),transform .5s cubic-bezier(.165,.84,.44,1);
+
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.03);
+	}
+
 	@include FLOW-at($tablet) {
 		padding: 30px 40px;
 	}

@@ -23,7 +23,7 @@
 	margin: 0;
 	font-size: $font-size-large;
 
-	transition: all 100ms ease-in-out;
+	transition: all 100ms cubic-bezier(.165,.84,.44,1);
 	padding: 18px 30px;
 	border: 2px solid $_border;
 
@@ -94,4 +94,8 @@
 .a-button--fullWidth {
 	width: 100%;
 	padding: 5px;
+}
+
+.a-button--margin-top {
+	margin-top: 30px;
 }

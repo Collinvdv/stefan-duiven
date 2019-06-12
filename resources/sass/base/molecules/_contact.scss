@@ -1,3 +1,10 @@
 .m-contact {
 	box-shadow: 0 0 50px 0 rgba(13,21,41,0.06);
+
+	transition: box-shadow .5s cubic-bezier(.165,.84,.44,1),transform .5s cubic-bezier(.165,.84,.44,1);
+
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.03);
+	}
 }

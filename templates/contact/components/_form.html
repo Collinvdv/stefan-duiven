@@ -7,6 +7,7 @@
 				</section>
 
 				<section class="u-grid__col-1-2 u-padding--small ">
+					<h2 style="padding-bottom: 25px;"> Send me a message </h2>
 					{% macro errorList(errors) %}
 					{% if errors %}
 					<ul class="errors">
@@ -22,6 +23,7 @@
 					<form method="post" action="" accept-charset="UTF-8">
 						{{ csrfInput() }}
 						<input type="hidden" name="action" value="contact-form/send">
+						{{ redirectInput('contact/thanks') }}
 
 						<h3><label for="from-name">Your Name</label></h3>
 						<input id="from-name" type="text" name="fromName" value="{{ message.fromName ?? '' }}">
@@ -42,22 +44,9 @@
 						<input type="submit" value="Send">
 					</form>
 
-					<h2 style="padding-bottom: 25px;"> Send me a message </h2>
 					<div class="a-input">
 						<div class="a-input__field-holder">
-							<input type="text" name="input-text" id="input-text" placeholder="Placeholder" />
-						</div>
-					</div>
-
-					<div class="a-input">
-						<div class="a-input__field-holder">
-							<input type="text" name="input-text" id="input-text" placeholder="Placeholder" />
-						</div>
-					</div>
-
-					<div class="a-input">
-						<div class="a-input__field-holder">
-							<textarea name="input-textarea" id="input-textarea" cols="30" rows="5" placeholder="Your message"></textarea>
+							<textarea name="input-textarea" id="input-textarea" cols="30" rows="5" placeholder="Jouw naam"></textarea>
 						</div>
 					</div>
 
