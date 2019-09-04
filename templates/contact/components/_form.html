@@ -17,7 +17,6 @@
 	<input type="hidden" name="action" value="contact-form/send">
 	{{ redirectInput('contact/thanks') }}
 
-
 	<div class="a-input">
 		<label for="from-name">Your Name</label>
 		<input id="from-name" type="text" name="fromName" value="{{ message.fromName ?? '' }}">
@@ -42,5 +41,5 @@
 	</div>
 	{{ message is defined and message ? errorList(message.getErrors('message')) }}
 
-	<input type="submit" value="Send">
+	<input type="submit" value="Verstuur" class="a-button">
 </form>
