@@ -2,7 +2,7 @@
 
 return [
 	'toEmail'             => 'collinvdv@gmail.com',
-	'prependSubject'      => '',
+	'prependSubject'      => 'site formulier',
 	'prependSender'       => '',
 	'allowAttachments'    => false,
 	'successFlashMessage' => 'Message sent!'
