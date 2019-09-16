@@ -17,8 +17,9 @@
 		<div class="container">
 			<h1> Laatse Resultaat </h1>
 			{% for flight in flights.all() %}
-			{% include '/flights/components/_flight.html' with { pigeon: null } %}
+				{% include '/flights/components/_flight.html' with { pigeon: null } %}
 			{% endfor %}
+
 			<div class="u-flex u-flex-center">
 				<a href="/" class="a-button"> Zie meer resultaten </a>
 			</div>
