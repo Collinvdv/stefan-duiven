@@ -11,15 +11,13 @@
 {% from _self import errorList %}
 
 <form method="post" action="" accept-charset="UTF-8">
-	{{ csrfInput() }}
 
-	<input type="hidden" name="toEmail" value="{{ 'collinvdv@gmail.com' }}">
+	{{ csrfInput() }}
 	<input type="hidden" name="action" value="contact-form/send">
-	{{ redirectInput('contact/thanks') }}
 
 	<div class="a-input">
-		<label for="from-name">Your Name</label>
-		<input id="from-name" type="text" name="fromName" value="{{ message.fromName ?? '' }}">
+		<label for="fromName">Your Name</label>
+		<input id="fromName" type="text" name="fromName" value="{{ message.fromName ?? '' }}">
 	</div>
 	{{ message is defined and message ? errorList(message.getErrors('fromName')) }}
 

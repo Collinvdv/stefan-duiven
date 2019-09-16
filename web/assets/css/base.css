@@ -168,6 +168,10 @@ section {
   padding-left: 0 !important;
 }
 
+.u-no-padding-top {
+  padding-top: 0 !important;
+}
+
 @media screen and (max-width: 45em) {
   .u-hidden-on-mobile {
     display: none;
@@ -1907,6 +1911,10 @@ fieldset:last-child {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+}
+
+.m-bird__block__image--detail {
+  height: 350px;
 }
 
 @-webkit-keyframes pulse {

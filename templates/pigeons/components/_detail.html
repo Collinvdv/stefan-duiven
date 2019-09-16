@@ -11,44 +11,48 @@
 <!-- Content -->
 <section class="m-section m-section--small">
 	<div class="container">
-
-
-		<!--  Image -->
-		{% if entry.generic_header is not empty %}
-		<div class="m-bird__block__image" style="background-image: url('{{entry.generic_header.one().getVolume().path}}/{{entry.generic_header.one().filename}}')">
-		</div>
-		{% else %}
-		<div class="m-bird__block__image" style="background-image: url('/assets/img/placeholder.png')">
-		</div>
-		{% endif %}
-
-		<!--  Content -->
-		<div class="m-bird__block__content">
-			<h1> Paspoort </h1>
-			<p> {{entry.generic_description}} </p>
-
-			{% if entry.pigeon_attributes is not empty %}
-			<div class="u-flex u-flex-space-between u-flex-wrap">
-				{% for attribute in entry.pigeon_attributes.all() %}
-				<div class="u-grid__col-1-2">
-					<h2> {{attribute.attribute_title}} </h2>
-					<p> {{attribute.attribute_description}} </p>
-				</div>
-				{% endfor %}
+		<div class="u-grid u-grid--with-margins">
+			<div class="u-grid__col-1-2">
+				<!--  Image -->
+				{% if entry.generic_header is not empty %}
+					<div class="m-bird__block__image m-bird__block__image--detail" style="background-image: url('/{{entry.generic_header.one().getVolume().path}}/{{entry.generic_header.one().filename}}')">
+					</div>
+				{% else %}
+					<div class="m-bird__block__image m-bird__block__image--detail" style="background-image: url('/assets/img/placeholder.png')">
+					</div>
+				{% endif %}
 			</div>
-			{% endif %}
 
-			{% if entry.pigeon_stamboom is not empty %}
-			<a href="/assets/img/general/{{entry.pigeon_stamboom.one().filename}}" class="a-link" target="_blank">Download stamboom <span class="icon-download"></span></a>
-			{% endif %}
+			<div class="u-grid__col-1-2">
+				<!--  Content -->
+				<div class="m-bird__block__content" style="padding-left: 20px;">
+					<h1> Paspoort </h1>
+					<p> {{entry.generic_description}} </p>
 
-			{% if entry.pigeon_forsale == 1 %}
-				<a href="/" class="a-button a-button--filled"> Buy </a>
-			{% endif %}
+					{% if entry.pigeon_attributes is not empty %}
+					<div class="u-flex u-flex-space-between u-flex-wrap" style="margin-left: -8px;">
+						{% for attribute in entry.pigeon_attributes.all() %}
+						<div class="u-grid__col-1-2">
+							<h2> {{attribute.attribute_title}} </h2>
+							<p> {{attribute.attribute_description}} </p>
+						</div>
+						{% endfor %}
+					</div>
+					{% endif %}
 
-			{% if entry.pigeon_eggforsale == 1 %}
-				<a href="/" class="a-button"> Buy an egg </a>
-			{% endif %}
+					{% if entry.pigeon_stamboom is not empty %}
+					<a href="/assets/img/general/{{entry.pigeon_stamboom.one().filename}}" class="a-link" target="_blank">Download stamboom <span class="icon-download"></span></a>
+					{% endif %}
+
+					{% if entry.pigeon_forsale == 1 %}
+					<a href="/" class="a-button a-button--filled"> Buy </a>
+					{% endif %}
+
+					{% if entry.pigeon_eggforsale == 1 %}
+					<a href="/" class="a-button"> Buy an egg </a>
+					{% endif %}
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
