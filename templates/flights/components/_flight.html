@@ -38,6 +38,12 @@
 
 		<!--  Vlucht datum-->
 		<div class="m-flight__detail">
+			<span class="m-flight__detail__title"> # aantal duiven </span>
+			<span class="m-flight__detail__content"> {{flight.flight_count_pigeons}}</span>
+		</div>
+
+		<!--  Vlucht datum-->
+		<div class="m-flight__detail">
 			<span class="m-flight__detail__title"> Weeromstandigheden </span>
 			<span class="m-flight__detail__content"> {{flight.flight_weather[0].title}} </span>
 		</div>
@@ -46,12 +52,6 @@
 		<div class="m-flight__detail">
 			<span class="m-flight__detail__title"> Afstand </span>
 			<span class="m-flight__detail__content"> {{flight.flight_distance}}</span>
-		</div>
-
-		<!--  Vlucht datum-->
-		<div class="m-flight__detail">
-			<span class="m-flight__detail__title"> # views </span>
-			<span class="m-flight__detail__content"> {{flight.flight_views}}</span>
 		</div>
 	</div>
 
@@ -94,9 +94,15 @@
 								<span class="m-flight__table__label--mobile"> Naam</span>
 								VAN DE VELDE STEFAN <br>
 								<span class="m-flight__table__label--mobile"> Afstand</span>
-								{{flight_result_item.distance}} <br>
+								{{flight.flight_distance}}<br>
 								<span class="m-flight__table__label--mobile"> Ringnummer </span>
-								{{flight_result_item.pigeon.one().pigeon_ringnumber}}
+								{% if flight_result_item.pigeon.one() %}
+									<a  href="/duif/{{flight_result_item.pigeon.one().slug}}">
+										{{flight_result_item.pigeon.one().pigeon_ringnumber}}
+									</a>
+								{% else %}
+									{{flight_result_item.pigeon_number}}
+								{% endif %}
 								<span class="m-flight__table__label--mobile"> Snelheid </span>
 								{{flight_result_item.snelheid}}
 
@@ -110,14 +116,17 @@
 							</td>
 
 							<td>
-								{{flight_result_item.distance}}
+								{{flight.flight_distance}}
 							</td>
 
 							<td>
-								<a  href="/duif/{{flight_result_item.pigeon.one().slug}}">
-									{{flight_result_item.pigeon.one().pigeon_ringnumber}}
-								</a>
-
+								{% if flight_result_item.pigeon.one() %}
+									<a  href="/duif/{{flight_result_item.pigeon.one().slug}}">
+										{{flight_result_item.pigeon.one().pigeon_ringnumber}}
+									</a>
+								{% else %}
+									{{flight_result_item.pigeon_number}}
+								{% endif %}
 							</td>
 
 							<td>
