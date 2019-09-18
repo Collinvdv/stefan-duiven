@@ -15,7 +15,7 @@
 			<div class="u-grid__col-1-2">
 				<!--  Image -->
 				{% if entry.generic_header is not empty %}
-					<div class="m-bird__block__image m-bird__block__image--detail" style="background-image: url('/assets/uploads/{{entry.generic_header.one().getVolume().path}}/{{entry.generic_header.one().filename}}')">
+					<div class="m-bird__block__image m-bird__block__image--detail" style="background-image: url('/assets/uploads/{{entry.generic_header.one().filename}}')">
 					</div>
 				{% else %}
 					<div class="m-bird__block__image m-bird__block__image--detail" style="background-image: url('/assets/img/placeholder.png')">
@@ -41,7 +41,7 @@
 					{% endif %}
 
 					{% if entry.pigeon_stamboom is not empty %}
-					<a href="/assets/img/general/{{entry.pigeon_stamboom.one().filename}}" class="a-link" target="_blank">Download stamboom <span class="icon-download"></span></a>
+					<a href="/assets/uploads/{{entry.pigeon_stamboom.one().filename}}" class="a-link" target="_blank">Download stamboom <span class="icon-download"></span></a>
 					{% endif %}
 
 					{% if entry.pigeon_forsale == 1 %}
