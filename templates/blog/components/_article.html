@@ -1,7 +1,7 @@
 <div class="o-article__block o-article__block--small">
 	<!--  Image -->
 	{% if article.generic_header is not empty %}
-		<div class="o-article__block__image" style="background-image: url('{{article.generic_header.one().getVolume().path}}/{{article.generic_header.one().filename}}')">
+		<div class="o-article__block__image" style="background-image: url('/assets/images/{{article.generic_header.one().filename}}')">
 		</div>
 	{% endif %}
 

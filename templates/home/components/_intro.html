@@ -3,7 +3,7 @@
 		<div class="u-flex u-flex-space-between u-flex-wrap">
 			<section class="u-grid__col-1-2">
 				{% if entry.generic_header is not empty %}
-					<div class="o-page-intro__image" style="background-image: url('{{entry.generic_header.one().getVolume().path}}/{{entry.generic_header.one().filename}}')">
+					<div class="o-page-intro__image" style="background-image: url('/assets/images/{{entry.generic_header.one().filename}}')">
 						<div class="o-page-intro__pigeon">
 						</div>
 					</div>
