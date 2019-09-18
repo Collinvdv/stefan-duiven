@@ -6,10 +6,17 @@
 	<div class="container">
 		<div class="m-bird__block u-flex u-flex-space-between">
 			<div class="u-grid__col-1-2">
-				<div class="m-bird__block__image" style="background-image: url('/assets/uploads/{{pigeon.generic_header.one().filename}}')">
-					<span class="icon-heart">
-					</span>
-				</div>
+				{% if pigeon.generic_header is not empty %}
+					<div class="m-bird__block__image" style="background-image: url('/assets/uploads/{{pigeon.generic_header.one().filename}}');background-position: {{pigeon.generic_position}} center">
+						<span class="icon-heart">
+						</span>
+					</div>
+				{% else %}
+					<div class="m-bird__block__image" style="background-image: url('/assets/img/placeholder.png')">
+						<span class="icon-heart">
+						</span>
+					</div>
+				{% endif %}
 			</div>
 
 			<div class="u-grid__col-1-2 u-padding">
