@@ -15,7 +15,7 @@
 			<div class="u-grid__col-1-2">
 				<!--  Image -->
 				{% if entry.generic_header is not empty %}
-					<div class="m-bird__block__image m-bird__block__image--detail" style="background-image: url('/{{entry.generic_header.one().getVolume().path}}/{{entry.generic_header.one().filename}}')">
+					<div class="m-bird__block__image m-bird__block__image--detail" style="background-image: url('/assets/uploads/{{entry.generic_header.one().getVolume().path}}/{{entry.generic_header.one().filename}}')">
 					</div>
 				{% else %}
 					<div class="m-bird__block__image m-bird__block__image--detail" style="background-image: url('/assets/img/placeholder.png')">

@@ -2,7 +2,7 @@
 <div class="m-bird__block m-bird__block--small">
 	<!--  Image -->
 	{% if pigeon.generic_header is not empty %}
-		<div class="m-bird__block__image" style="background-image: url('/assets/img/general/{{pigeon.generic_header.one().filename}}');background-position: {{pigeon.generic_position}} center">
+		<div class="m-bird__block__image" style="background-image: url('/assets/uploads/{{pigeon.generic_header.one().filename}}');background-position: {{pigeon.generic_position}} center">
 		</div>
 	{% else %}
 		<div class="m-bird__block__image" style="background-image: url('/assets/img/placeholder.png')">

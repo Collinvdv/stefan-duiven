@@ -14,7 +14,7 @@
 
 # Example shared files and folders:
 shared_files: [ .env ]
-shared_folders: [web/assets/images, storage, vendor]
+shared_folders: [web/assets/uploads, storage, vendor]
 
 # Hooks should be Bash shell scripts and get executed at different stages during deploy
 # Arguments: $1 = branch, $2 = commit id, $3 = checkout folder

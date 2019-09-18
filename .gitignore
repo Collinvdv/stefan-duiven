@@ -11,6 +11,7 @@ deploy/
 dist/
 config.json
 craft/web/assets/img/*
+craft/web/assets/uploads/*
 craft/storage/logs/*
 craft/web/assets/
 */cpresources/
