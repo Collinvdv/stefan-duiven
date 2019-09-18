@@ -1,4 +1,19 @@
-<div class="m-flight">
+{% set show = true %}
+
+{% if pigeon is not empty %}
+	{% set show = false %}
+
+	{% for flight_result_item in flight.flight_result_item.all() %}
+		{% if pigeon is not empty %}
+			{% if pigeon.pigeon_ringnumber == flight_result_item.pigeon.one().pigeon_ringnumber %}
+				{% set show = true %}
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+{% endif %}
+
+{% if show %}
+	<div class="m-flight">
 	<!--  Header -->
 	<div class="u-flex u-flex-space-between u-flex-wrap">
 		<h2 class="m-flight__title">{{flight.title}}</h2>
@@ -99,7 +114,7 @@
 							</td>
 
 							<td>
-								<a  href="/pigeon/{{flight_result_item.pigeon.one().slug}}">
+								<a  href="/duif/{{flight_result_item.pigeon.one().slug}}">
 									{{flight_result_item.pigeon.one().pigeon_ringnumber}}
 								</a>
 
@@ -115,8 +130,9 @@
 	</table>
 
 	<div class="u-flex u-flex-center u-margin-top">
-		<a href="/flight/{{flight.slug}}" class="a-button a-button--small a-button--margin-top">
+		<a href="/resultaat/{{flight.slug}}" class="a-button a-button--small a-button--margin-top">
 			zie volledige resultaat
 		</a>
 	</div>
 </div>
+{% endif %}

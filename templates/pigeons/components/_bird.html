@@ -29,7 +29,7 @@
 
 		<div class="m-bird__actions">
 			{% if pigeon.pigeon_stamboom is not empty %}
-			<a href="/assets/img/general/{{pigeon.pigeon_stamboom.one().filename}}" class="a-link" target="_blank">Download stamboom <span class="icon-download"></span></a>
+			<a href="/assets/uploads/{{pigeon.pigeon_stamboom.one().filename}}" class="a-link" target="_blank">Download stamboom <span class="icon-download"></span></a>
 			{% endif %}
 
 			{% if pigeon.pigeon_forsale == 1 %}
@@ -40,7 +40,7 @@
 				<a href="/contact" class="a-button a-button--fullWidth "> Koop een ei </a>
 			{% endif %}
 
-			<a class="a-button a-button--filled a-button--fullWidth" href="/pigeon/{{pigeon.slug}}"> Lees meer over deze duif</a>
+			<a class="a-button a-button--filled a-button--fullWidth" href="/duif/{{pigeon.slug}}"> Lees meer over deze duif</a>
 		</div>
 
 	</div>
