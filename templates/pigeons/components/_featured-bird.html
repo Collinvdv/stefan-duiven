@@ -28,15 +28,15 @@
 				{% endif %}
 
 				{% if pigeon.pigeon_stamboom is not empty %}
-					<a href="/assets/img/general/{{pigeon.pigeon_stamboom.one().filename}}" class="a-link" target="_blank">Download stambood <span class="icon-download"></span></a>
+					<a href="/assets/uploads/{{pigeon.pigeon_stamboom.one().filename}}" class="a-link" target="_blank">Download stamboom <span class="icon-download"></span></a>
 				{% endif %}
 
 				{% if pigeon.pigeon_forsale == 1 %}
-					<a href="/" class="a-button a-button--filled"> Buy </a>
+					<a href="/" class="a-button a-button--filled"> Koop deze duif </a>
 				{% endif %}
 
 				{% if pigeon.pigeon_eggforsale == 1 %}
-					<a href="/" class="a-button"> Buy an egg </a>
+					<a href="/" class="a-button"> Koop een ei </a>
 				{% endif %}
 
 				<a class="a-button a-button--filled" href="/pigeon/{{pigeon.slug}}"> Lees meer </a>
