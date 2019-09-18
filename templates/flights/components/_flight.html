@@ -32,6 +32,12 @@
 
 		<!--  Vlucht datum-->
 		<div class="m-flight__detail">
+			<span class="m-flight__detail__title"> Afstand </span>
+			<span class="m-flight__detail__content"> {{flight.flight_distance}}</span>
+		</div>
+
+		<!--  Vlucht datum-->
+		<div class="m-flight__detail">
 			<span class="m-flight__detail__title"> # deelnemers</span>
 			<span class="m-flight__detail__content"> {{flight.flight_deelnemers}} </span>
 		</div>
@@ -46,12 +52,6 @@
 		<div class="m-flight__detail">
 			<span class="m-flight__detail__title"> Weeromstandigheden </span>
 			<span class="m-flight__detail__content"> {{flight.flight_weather[0].title}} </span>
-		</div>
-
-		<!--  Vlucht datum-->
-		<div class="m-flight__detail">
-			<span class="m-flight__detail__title"> Afstand </span>
-			<span class="m-flight__detail__content"> {{flight.flight_distance}}</span>
 		</div>
 	</div>
 
