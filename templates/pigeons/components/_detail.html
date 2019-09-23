@@ -57,18 +57,35 @@
 	</div>
 </section>
 
-<!--  Variable declaration -->
-{% set flights = craft.entries.section('flight') %}
+{% if entry.pigeon_category == "vlieger" %}
+	<!--  Variable declaration -->
+	{% set flights = craft.entries.section('flight') %}
 
-<!--  Grid of the programs -->
-<section class="m-section m-section--small">
-	<div class="container">
-		<h1> Resultaten </h1>
-		{% for flight in flights.all() %}
-			{% include '/flights/components/_flight.html' with { pigeon: entry } %}
-		{% endfor %}
-	</div>
-</section>
+	<!--  Grid of the programs -->
+	{% if flights.all() %}
+		<section class="m-section m-section--small">
+			<div class="container">
+				<h1> Resultaten </h1>
+				{% for flight in flights.all() %}
+					{% include '/flights/components/_flight.html' with { pigeon: entry } %}
+				{% endfor %}
+			</div>
+		</section>
+	{% endif %}
+{% endif %}
+
+{% if entry.RelatedPigeon  %}
+		<section class="m-section m-section--small">
+			<div class="container">
+				<h1> Gerelateerde duiven </h1>
+				{% for pigeon in entry.RelatedPigeon.all() %}
+						{% include '/pigeons/components/_bird.html' with {
+							"pigeon" : pigeon.duif.first()
+						}  %}
+				{% endfor %}
+			</div>
+		</section>
+{% endif %}
 
 
 
