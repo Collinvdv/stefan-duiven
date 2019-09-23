@@ -1,16 +1,45 @@
 <!--  Variable declaration -->
-{% set pigeons = craft.entries ({
-									 section: 'pigeon',
-									 limit: null
+{% set kwekers = craft.entries ({
+	section: 'pigeon',
+	limit: null,
+	search: 'pigeon_category:*kweker'
 }) %}
 
+{% set vliegers = craft.entries ({
+	section: 'pigeon',
+	limit: null,
+	search: 'pigeon_category:*vlieger'
+}) %}
+
+{{ dump(vliegers.all()) }}
+
 <!--  Grid of the programs -->
+{% if kwekers.all() %}
+	<section class="m-section m-section--small">
+		<div class="container">
+
+			<h1> Kwekers </h1>
+
+			<div class="u-flex u-flex-wrap">
+				{% for pigeon in kwekers.all() %}
+					{% include '/pigeons/components/_bird.html' %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+{% if vliegers.all() %}
 <section class="m-section m-section--small">
 	<div class="container">
+
+		<h1> vliegers </h1>
+
 		<div class="u-flex u-flex-wrap">
-			{% for pigeon in pigeons.all() %}
+			{% for pigeon in vliegers.all() %}
 				{% include '/pigeons/components/_bird.html' %}
 			{% endfor %}
 		</div>
 	</div>
 </section>
+{% endif %}
