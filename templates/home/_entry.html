@@ -13,6 +13,7 @@
 	}) %}
 
 	<!--  Grid of the programs -->
+{% if flights.all() %}
 	<section class="m-section m-section--small">
 		<div class="container">
 			<h1> Laatste Resultaat </h1>
@@ -26,6 +27,7 @@
 		</div>
 
 	</section>
+{% endif %}
 
 	<!-- Bird -->
 	{% include '/home/components/_bird.html' %}

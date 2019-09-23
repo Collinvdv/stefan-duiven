@@ -2,7 +2,8 @@
 {% set pigeon = entry.generic_pigeon.one() %}
 
 <!--  Render-->
-<section class="m-section m-section--small">
+{% if pigeon %}
+	<section class="m-section m-section--small">
 	<div class="container">
 		<div class="m-bird__block u-flex u-flex-space-between">
 			<div class="u-grid__col-1-2">
@@ -52,3 +53,4 @@
 		</div>
 	</div>
 </section>
+{% endif %}

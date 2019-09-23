@@ -2,40 +2,42 @@
 {% set pigeon = entry.generic_pigeon.one() %}
 
 <!--  Render-->
-<section class="m-section m-section--small m-section--white">
-	<div class="container">
-		<h1> Duif in de kijker </h1>
-		<div class="m-bird__block m-bird__block--home u-flex u-flex-space-between u-flex-wrap">
+{% if pigeon %}
+	<section class="m-section m-section--small m-section--white">
+		<div class="container">
+			<h1> Duif in de kijker </h1>
+			<div class="m-bird__block m-bird__block--home u-flex u-flex-space-between u-flex-wrap">
 
-			<div class="u-grid__col-1-2 u-padding u-no-padding-left">
-				<h1> {{pigeon.title}}</h1>
-				<p> {{pigeon.generic_description}} </p>
+				<div class="u-grid__col-1-2 u-padding u-no-padding-left">
+					<h1> {{pigeon.title}}</h1>
+					<p> {{pigeon.generic_description}} </p>
 
-				{% if pigeon.pigeon_attributes is not empty %}
-						{% for attribute in pigeon.pigeon_attributes.all() %}
-							<div class="">
-								<h2> {{attribute.attribute_title}} </h2>
-								<p> {{attribute.attribute_description}} </p>
-							</div>
-						{% endfor %}
-				{% endif %}
-				<a href="/duif/{{pigeon.slug}}" class="a-button"> Kom meer te weten </a>
+					{% if pigeon.pigeon_attributes is not empty %}
+							{% for attribute in pigeon.pigeon_attributes.all() %}
+								<div class="">
+									<h2> {{attribute.attribute_title}} </h2>
+									<p> {{attribute.attribute_description}} </p>
+								</div>
+							{% endfor %}
+					{% endif %}
+					<a href="/duif/{{pigeon.slug}}" class="a-button"> Kom meer te weten </a>
+				</div>
+
+				<div class="u-grid__col-1-2 u-padding">
+					<!--  Image-->
+					{% if pigeon.generic_header is not empty %}
+						<div class="m-bird__block__image" style="background-image: url('/assets/uploads/{{pigeon.generic_header.one().filename}}')">
+							<span class="icon-heart">
+							</span>
+						</div>
+					{% endif %}
+
+				</div>
 			</div>
 
-			<div class="u-grid__col-1-2 u-padding">
-				<!--  Image-->
-				{% if pigeon.generic_header is not empty %}
-					<div class="m-bird__block__image" style="background-image: url('/assets/uploads/{{pigeon.generic_header.one().filename}}')">
-						<span class="icon-heart">
-						</span>
-					</div>
-				{% endif %}
-
+			<div class="u-flex u-flex-center">
+				<a href="/duiven" class="a-button"> Zie meer van onze duiven </a>
 			</div>
 		</div>
-
-		<div class="u-flex u-flex-center">
-			<a href="/duiven" class="a-button"> Zie meer van onze duiven </a>
-		</div>
-	</div>
-</section>
+	</section>
+{% endif %}
