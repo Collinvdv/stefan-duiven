@@ -14,7 +14,6 @@ craft/web/assets/img/*
 craft/web/assets/uploads/*
 craft/storage/logs/*
 craft/web/assets/
-!web/assets/js/app.js
 */cpresources/
 .env
 craft/.env
@@ -23,3 +22,4 @@ craft/vendor
 craft/.DS_Store
 craft/storage
 vendor/
+!www/assets/js/app.js
