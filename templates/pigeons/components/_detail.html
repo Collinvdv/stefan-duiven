@@ -80,7 +80,8 @@
 				<h1> Gerelateerde duiven </h1>
 				{% for pigeon in entry.RelatedPigeon.all() %}
 						{% include '/pigeons/components/_bird.html' with {
-							"pigeon" : pigeon.duif.first()
+							"pigeon" : pigeon.duif.first(),
+							"relatie": pigeon.relatie
 						}  %}
 				{% endfor %}
 			</div>
