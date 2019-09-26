@@ -30,12 +30,6 @@
 	{{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
 
 	<div class="a-input">
-		<label for="subject">Subject</label>
-		<input id="subject" type="text" name="subject" value="{{ message.subject ?? '' }}">
-	</div>
-	{{ message is defined and message ? errorList(message.getErrors('subject')) }}
-
-	<div class="a-input">
 		<label for="message">Message</label>
 		<textarea rows="10" cols="40" id="message" name="message">{{ message.message ?? '' }}</textarea>
 	</div>
