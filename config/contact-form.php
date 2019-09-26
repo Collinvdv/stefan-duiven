@@ -1,8 +1,8 @@
 <?php
 
 return [
-	'toEmail'             => 'collinvdv@gmail.com',
-	'prependSubject'      => 'site formulier',
+	'toEmail'             => 'info@vandeveldepigeons.be',
+	'prependSubject'      => 'Formulier van de website',
 	'prependSender'       => '',
 	'allowAttachments'    => false,
 	'successFlashMessage' => 'Message sent!'
